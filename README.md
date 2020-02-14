@@ -3,7 +3,7 @@ Recycling App
 
 ## Description
 
-The average person doesn't know what is recyclable. This app tells you what to recycle and where you can easily recycle everything from newspapers to plastic bottles to computer equipment.
+The average person doesn't know the basics of recycling. This app will tell you how and where to easily recycle everything from newspapers to plastic bottles to computer equipment. In addition to providing useful information about recycling, there will be a place to chat with other recyclers.
 
 ## User Story
 
