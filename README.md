@@ -11,3 +11,6 @@ Persona: Reese
 
 She is 25, single and very busy. She is a grad student and works full time. She cares about the environment and the future of the world but doesn't have time to work out the fundamentals of recycling.
 
+## Team
+
+Juju  |  Sasha  |  Alex  | Chris
