@@ -19,17 +19,19 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: 'personal'
     }
   })
-  return Post; 
-};
+  Post.associate = function(models) {
+    Post.belongsTo(models.User,
+      {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  return Post;
   
-  // Post.associate = function(models) {
-  //   Post.belongsTo(models.User
-  //     , {
-  //     foreignKey: {
-  //       allowNull: false
-  //     }
-  //   }
-  //   );
+  
+}
+  
   // }
   // return Post;
 
