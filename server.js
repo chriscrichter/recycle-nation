@@ -23,13 +23,15 @@ app.use(express.static("public"));
 // =============================================================
 // require("./routes/html-routes.js")(app);
 require("./routes/user-api-routes.js")(app);
-// require("./routes/post-api-routes.js")(app);
+require("./routes/posts-api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 var PORT = process.env.PORT || 8080;
-db.sequelize.sync().then(function() {
+db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+//Put { force: true } -- in .sync() to drop and recreate database
