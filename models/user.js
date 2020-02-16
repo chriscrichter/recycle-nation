@@ -15,10 +15,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [5]
       }
     }
-
-
   });
-
   
   User.associate = function(models) {
     User.hasMany(models.Post, {
