@@ -60,10 +60,6 @@ module.exports = function(app) {
   });
 };
 
-  })
-
-
-}
 
 
 
