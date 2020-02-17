@@ -1,15 +1,16 @@
+var express = require('express');
+var app = express();
+var http = require('http').createServer(app);
+var io = require('socket.io')(http);
+var db = require("./models");
+var routes = require('./routes');
+var twitter = require("./services/twitter");
 const path = require('path');
-const express = require('express');
 const exphbs = require('express-handlebars');
 const mysql = require("mysql");
-const app = express(),
-      staticServe = express.static(`${ __dirname }/public`);
 
-// Set the port of our application
-// process.env.PORT lets the port be set by Heroku
 var PORT = process.env.PORT || 8080;
 
-// Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public/stylesheets'));
@@ -20,50 +21,47 @@ app.engine('.handlebars', exphbs({
   extname: '.handlebars',
   layoutsDir: path.join(__dirname, 'views/layouts')
 }));
+
 app.set('view engine', '.handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
-// Requiring our models for syncing
-//var db = require("./models");
+app.use(express.static("public"));
 
-// Routes
-// =============================================================
-// require("./routes/html-routes.js")(app);
-//require("./routes/user-api-routes.js")(app);
-//require("./routes/post-api-routes.js")(app);
-//require("./routes/fact-api-routes.js")(app);
+app.use(routes.twitter);
+app.use(routes.user);
+app.use(routes.facts);
+app.use(routes.html);
+app.use(routes.blog);
 
-
-var connection = mysql.createConnection({
-  host: "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  port: 3306,
-  user: "bm8ozsqt8ehomlw5",
-  password: "xr1wsmn48fb916jq",
-  database: "gajb8m09t9ub53b5"
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html');
 });
 
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-
-  console.log("connected as id " + connection.threadId);
+io.on('connection', function(socket){
+  console.log('a user connected witht he socket id', socket.id);
 });
 
-// Root get route.
-app.get("/", function(req, res) {
-  connection.query("SELECT fact FROM facts ORDER BY RAND() limit 1;", function(err, data) {
-    if (err) {
-      throw err;
-    }
-
-    res.render("index", { facts: data });
+// send a new tweet emission every 5000 milliseconds
+const interval = setInterval(() => {
+  console.log('emitting new mock tweet');
+  io.emit('new tweet', {
+    text: 'here is a sample tweet',
+    user: 'some user'
   });
-});
+}, 5000);
 
-// Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
-});
+// twitter.on('data', function(data) {
+//   console.log("got some new twitter data");
+//   io.emit('new tweet', data);
+// })
+
+// twitter.on('error', function(error) {
+//   throw error;
+// });
+
+db.sequelize.sync()
+  .then(function() {
+    http.listen(PORT, function(){
+      console.log('listening on *:', PORT);
+    });
+  });
