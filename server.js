@@ -1,38 +1,53 @@
-// *****************************************************************************
-// Server.js - This file is the initial starting point for the Node/Express server.
-// ******************************************************************************
-// *** Dependencies
-// =============================================================
-var express = require("express");
-
-// Sets up the Express App
-// =============================================================
+var express = require('express');
 var app = express();
-
-// Requiring our models for syncing
+var http = require('http').createServer(app);
+var io = require('socket.io')(http);
 var db = require("./models");
+var routes = require('./routes');
+var twitter = require("./services/twitter");
 
-// Sets up the Express app to handle data parsing
+var PORT = process.env.PORT || 8080;
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Static directory
 app.use(express.static("public"));
 
-// Routes
-// =============================================================
-// require("./routes/html-routes.js")(app);
-require("./routes/user-api-routes.js")(app);
-require("./routes/post-api-routes.js")(app);
-require("./routes/fact-api-routes.js")(app);
+app.use(routes.twitter);
+app.use(routes.user);
+app.use(routes.facts);
+app.use(routes.html);
+app.use(routes.blog);
 
-// Syncing our sequelize models and then starting our Express app
-// =============================================================
-var PORT = process.env.PORT || 8080;
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html');
 });
 
-//Put { force: true } -- in .sync() to drop and recreate database
+io.on('connection', function(socket){
+  console.log('a user connected witht he socket id', socket.id);
+});
+
+// send a new tweet emission every 5000 milliseconds
+// const interval = setInterval(() => {
+//   console.log('emitting new mock tweet');
+//   io.emit('new tweet', {
+//     text: 'here is a sample tweet',
+//     user: 'some user'
+//   });
+// }, 5000);
+
+twitter.on('data', function(data) {
+  console.log("got some new twitter data");
+  io.emit('new tweet', data);
+})
+
+twitter.on('error', function(error) {
+  throw error;
+});
+
+db.sequelize.sync().then(function() {
+  http.listen(PORT, function(){
+    console.log('listening on *:', PORT);
+  });
+});
