@@ -8,12 +8,12 @@ body {
 
 .page {
     display: grid;
-    background-image: url(../assets/images/ocean-v.jpg);
+    background-image: url(ocean-v.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 15vh 20vh 15vh 1fr;
 }
@@ -34,7 +34,7 @@ body {
 
 .name-slogan {
     grid-column: 1 / 3;
-    grid-row: 2 / 3;
+    grid-row: 2 / 2;
     text-align: center;
     justify-self: center;
     align-self: center;
@@ -44,13 +44,19 @@ body {
     font-size: calc(15px + 2vw);
 }
 
+.fact {
+    justify-self: start;
+    margin-left: 20px;
+    margin-right: 20px;
+}  
+
 .slogan {
     font-size: calc(13px + 1vw);
 }
 
 .search {
     grid-column: 1 / 3;
-    grid-row: 3 / 4;
+    grid-row: 3 / 3;
     justify-self: center;
     align-self: center;
 }
@@ -114,7 +120,7 @@ body {
 
 @media screen and (min-width: 678px){
     .page {
-        background-image: url(../assets/images/ocean-h.jpg);
+        background-image: url(ocean-h.jpg);
     }
     
     .button {
@@ -148,6 +154,12 @@ body {
         border: 1px solid black;
         color: black;
     }
+
+    .fact {
+        justify-self: start;
+        margin-left: 80px;
+        margin-right: 80px;
+    }  
     
     ::placeholder {
         color: black;
