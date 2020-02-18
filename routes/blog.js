@@ -9,7 +9,7 @@ router.get("/api/posts/", function(req, res) {
     });
 });
 
-router.post("/api/posts", function(req, res) {
+router.post("/api/posts", passport.authenticate("local"), function(req, res) {
   console.log(req.body);
   db.Post.create(req.body)
     .then(function(dbPost) {
@@ -39,7 +39,7 @@ router.get("/api.posts", function(req, res){
   }).then(res.json);
 });
 
-router.put("/api/posts", function(req, res){
+router.put("/api/posts", passport.authenticate("local"), function(req, res){
   const query = {
     where: {
       id:  req.body.id
