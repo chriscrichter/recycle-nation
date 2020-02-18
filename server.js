@@ -1,4 +1,6 @@
 var express = require('express');
+var session = require("express-session");
+var passport = require("./config/passport");
 var app = express();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
@@ -27,11 +29,18 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static("public"));
 
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(routes.twitter);
 app.use(routes.user);
 app.use(routes.facts);
 app.use(routes.html);
 app.use(routes.blog);
+app.use(routes.api);
+
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
@@ -42,13 +51,13 @@ io.on('connection', function(socket){
 });
 
 // send a new tweet emission every 5000 milliseconds
-const interval = setInterval(() => {
-  console.log('emitting new mock tweet');
-  io.emit('new tweet', {
-    text: 'here is a sample tweet',
-    user: 'some user'
-  });
-}, 5000);
+// const interval = setInterval(() => {
+//   console.log('emitting new mock tweet');
+//   io.emit('new tweet', {
+//     text: 'here is a sample tweet',
+//     user: 'some user'
+//   });
+// }, 5000);
 
 // twitter.on('data', function(data) {
 //   console.log("got some new twitter data");

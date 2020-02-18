@@ -3,5 +3,6 @@ module.exports = {
   html: require('./html'),
   facts: require('./facts'),
   user: require('./user'),
-  twitter: require('./twitter')
+  twitter: require('./twitter'),
+  api: require('./login')
 };
