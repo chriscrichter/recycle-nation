@@ -1,4 +1,6 @@
 var express = require('express');
+var session = require("express-session");
+var passport = require("./config/passport");
 var app = express();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
@@ -27,11 +29,18 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static("public"));
 
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(routes.twitter);
 app.use(routes.user);
 app.use(routes.facts);
 app.use(routes.html);
 app.use(routes.blog);
+
+require("./routes/api-routes.js")(app);
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
