@@ -35,10 +35,11 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 app.use(routes.twitter);
 app.use(routes.user);
 app.use(routes.facts);
-app.use(routes.html);
+//app.use(routes.html);
 app.use(routes.blog);
 app.use(routes.api);
 

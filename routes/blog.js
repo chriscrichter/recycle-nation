@@ -1,11 +1,13 @@
 var express = require('express');
 var db = require("../models");
 var router = express.Router();
+var passport = require("../config/passport"); 
+
 
 router.get("/api/posts/", function(req, res) {
   db.Post.findAll({})
     .then(function(dbPost) {
-      res.json(dbPost);
+      res.render("blogs", { post: dbPost} );
     });
 });
 // , passport.authenticate("local")

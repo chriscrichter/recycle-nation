@@ -1,0 +1,14 @@
+<!-- Pass in data from blog.js -->
+<ul>
+  {{#each post}}
+  	<li>
+  		<p><span class="label">title:</span> {{this.title}}</p>
+      <p><span class="label">Body</span> {{this.body}}</p>
+      <p><span class="label">Category:</span> {{this.category}}</p>
+
+      <button data-id="{{this.id}}" class="delquote">Delete</button>
+
+      <a href="/{{this.id}}">Update this quote</a>
+  	</li>
+  {{/each}}
+</ul>
