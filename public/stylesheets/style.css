@@ -1,90 +1,121 @@
-/* ============= MOBILE =========== */
-
-body {
+/* scroll bars */
+/* bottom space? */
+/* ============ GLOBAL ================== */
+* {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Heebo', sans-serif;
+}
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
+/* ============ PAGE GRID ================== */
 .page {
+    margin:0;
+    padding: 0;
     display: grid;
-    background-image: url(ocean-v.jpg);
+    grid-template-columns: 10vw 10vw 10vw 10vw 20vw 20vw 10vw 10vw;
+    grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+}
+/* ============ PHOTO ================== */
+
+.photo {
+    grid-column: 1 / 4;
+    grid-row: 1 / -1;
+    z-index: 10;
+    background-image: url(ocean.jpg);
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
-    width: 100vw;
-    height: 90vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 15vh 20vh 15vh 1fr;
+    background-position: center;
+    border-top-right-radius: 60px;
+    clip-path: inset(0% 0% 0% 0%);
+    transition: all .5s ease-in-out; 
 }
 
-.videos {
-    grid-column: 1 / 2;
+/* ============ BLUE-BACKROUND ================== */
+
+.blue-background {
+    grid-column: 1 / 5;
+    grid-row: 1 / -1;
+    border-top-right-radius: 60px; 
+    background-color: #658ba8;
+    transition: all .5s ease-in-out; 
+}
+
+/* ============ BUTTONS ================== */
+
+/* grid */
+.nav-buttons {
+    grid-column: 5 / -1;
     grid-row: 1 / 2;
-    justify-self: center;
-    align-self: center;
-}   
-
-.tweets-blog {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    justify-self: center;
-    align-self: center;
-} 
-
-.name-slogan {
-    grid-column: 1 / 3;
-    grid-row: 2 / 2;
-    text-align: center;
-    justify-self: center;
-    align-self: center;
 }
 
-.name {
-    font-size: calc(15px + 2vw);
+.nav-buttons {
+    display: grid;
+    grid-auto-flow: column;
 }
 
-.fact {
+button {
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    margin: 5%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* add transform */
+
+.tweets {
     justify-self: start;
-    margin-left: 20px;
-    margin-right: 20px;
-}  
-
-.slogan {
-    font-size: calc(13px + 1vw);
 }
+
+.messages {
+    justify-self: start;
+}
+
+.login {
+    justify-self: end;
+}
+
+.signup {
+    justify-self: end;
+}
+
+/* =========== SEARCH ============ */
 
 .search {
-    grid-column: 1 / 3;
-    grid-row: 3 / 3;
+    width: 40%;
+    margin: 15% auto 0% auto;
+    grid-column: 5 / -1;
+    grid-row: 4 / 5;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 85% 15%;
+}
+
+#input-field {
+    width: 100%;
+    grid-row: 1 / -1; 
+    grid-column: 1 / -1;
+    align-self: center;
     justify-self: center;
-    align-self: center;
 }
 
-.logo {
-    grid-column: 1 / 3;
-    grid-row: 4 / 5; 
-    align-self: center;
-}
-
-.button {
-    border: 1px solid black;
-    color: black;
-    border-radius: 8px;
-    padding: 10%;
-    width: 27vw;
-    height: 100%;
-    font-size: calc(13px + 1vw);
-    text-align: center;
+#submit {
+    grid-row: 1 / -1; 
+    grid-column: 2 / -1;
+    margin-top: 4%;
 }
 
 #input-field {
     background-color: transparent;
-    font-size: calc(13px + 1vw);
+    font-size: calc(12px + 1vw);
     border: 1px solid black;
     border-radius: 8px;
     display: block;
-    padding: 5%;
+    padding: 3%;
     color: black;
 }
 
@@ -97,85 +128,214 @@ body {
     opacity: 1; /* Firefox */
 }
 
-.search-field {
-    margin: auto;
-    position: relative;
-}
-
 #submit {
     border: none;
-    padding: 5%;
-    position: absolute;
-    left: 85%;
-    top: 17%;
     background-color: transparent;
     background-image: url(icon-b.png);
-    background-size: 110%;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
 }
 
-/* ============ DESKTOP ==================== */
+/* ============ RECYCLE WORD ================== */
 
-@media screen and (min-width: 678px){
-    .page {
-        background-image: url(ocean-h.jpg);
-    }
-    
-    .button {
-        border: 1px solid black;
-        color: black;
-    }
-
-    .button {
-        border: 1px solid black;
-        color: black;
-        border-radius: 8px;
-        padding: 7%;
-        width: 13vw;
-        height: 100%;
-        font-size: calc(11px + 0.5vw);
-        text-align: center;
-    }
-
-    .videos {
-        justify-self: start;
-        margin-left: 5%;
-    }  
-
-    .tweets-blog {
-        justify-self: end;
-        margin-right: 10%;
-    } 
-    
-    #input-field {
-        /* background-color: rgba(0, 0, 0, 0.5); */
-        border: 1px solid black;
-        color: black;
-    }
-
-    .fact {
-        justify-self: start;
-        margin-left: 80px;
-        margin-right: 80px;
-    }  
-    
-    ::placeholder {
-        color: black;
-        opacity: 1; /* Firefox */
-    }
-    
-    #submit {
-        background-image: url(icon-b.png);
-    }
+/* grid */
+.recycle {
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+    z-index: 20;
 }
 
+.recycle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-transform: uppercase;
+    font-size: 62px;
+    margin-right: 3%;
+    margin-top: 3vh;
+}
 
-.twitter-feed {
+/* ============ NATION WORD ================== */
+
+/* grid */
+.nation {
+    grid-column: 2 / 5;
+    grid-row: 2 / -1;
+    z-index: 10;
+}
+
+.nation {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-transform: uppercase;
+    font-size: 62px;
+    margin-top: 17vh;
+    margin-right: 7%;
+    color: white;
+}
+
+/* ============ SLOGAN ================== */
+
+/* main grid */
+.slogan {
+    grid-column: 5 / -1;
+    grid-row: 3 / 5;
+}
+
+/* internal grid */
+.slogan {
+    display: grid;
+    margin-left: 16%;
+    grid-template-columns: 10% 10% 60% 10% 10%;
+    margin-top: 0;
+}
+
+.slogan {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.slogan div {
+    display: grid;
+}
+
+.line1 {
+    grid-column: 3 / -1;
+    grid-row: 1 / 2;
+}
+
+.line2 {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+}
+
+.line1 p {
+    align-self: end;
+    margin: 0;
+}
+
+.line2 p{
+    align-self: start;
+    justify-self: start;
+    margin: 0;
+}
+
+/* ============ FACT ================== */
+
+/* grid */
+.fact {
+    grid-column: 5 / -1;
+    grid-row: 9 / 10;
+}
+
+.fact {
+    text-align: center;
+    align-self: end;
+    padding: 0 5%;
+}
+
+/* ============ MODAL ================== */
+
+#modal-container {
+    max-width: 100%;
+    max-height: 100%;
+    grid-row: 2 / 10;
+    grid-column: 4 / 8;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #658ba8;
+    border-radius: 30px;
+    clip-path: circle(0% at 90% 20%);
+    transition: all .6s ease-in-out;
+    align-self: center;
+    justify-self: center;
+    padding: 1% 5%;
+}
+
+.info-field {
+    width: 90%;
+    background-color: transparent;
+    font-size: calc(13px + 1vw);
+    border: 1px solid white;
+    border-radius: 8px;
+    display: block;
+    padding: 3%;
+    margin: 3%;
+    color: white;
+} 
+
+#info-field:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+.signup-button:focus {
+    outline: none;
+}
+
+.close {
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+    align-self: flex-end;
+    margin: 5%;
+}
+
+.close:active {
+    transform: translateY(1px); 
+}
+
+#info-field:focus {
+    outline: none;
+}
+
+.modal-form input::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.signup-button {
+    border: 1px solid white;
+    color: white;
+    border-radius: 8px;
+    margin-top: 5%;
+    padding: 3%
+}
+
+.signup-button:focus {
+    outline: none;
+}
+
+/* ============ VISIBILITY ================== */
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.8s linear;
+}                
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+
+/* .twitter-feed {
     background-color: #eeeeee; 
     min-height: 200px; 
     max-height: 200px;
     overflow: scroll; 
     max-width: 300px; 
-}
+} */
