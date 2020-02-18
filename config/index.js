@@ -10,8 +10,8 @@ const twitter = {
 const envConfigs = {
   "development": {
     "username": "root",
-    "password": "Theoffice92",
-    "database": "recycle_db",
+    "password": "sasha1988",
+    "database": "recycle_DB",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

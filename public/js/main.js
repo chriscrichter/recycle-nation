@@ -9,16 +9,27 @@ $("#submit").click((event) => {
   // click event that hides name-slogan-search
   // and displays modal-container instead
   $("#signup-button").click(() => {
-    $(".background").css("filter", "blur(2px)");
-    $(".background").css("opacity", "0.9");
-    $(".name-slogan-search").removeClass("visible");
-    $(".name-slogan-search").addClass("hidden");
     $("#modal-container").removeClass("hidden");
     $("#modal-container").addClass("visible");
+    $("#modal-container").css("clip-path", "circle(75%)");
     $(".name-slogan").css("display", "none");
     $(".search").css("display", "none");
     $(".slogan").addClass("hidden");
-    $("#modal-container").css("clip-path", "circle(75%)");
+    $(".photo").css("clip-path", "inset(0% 100% 0% 0%)");
+    $(".blue-background").css("margin-right", "40%");
+    $(".recycle").css("margin-right", "60%");
+    $(".nation").css("margin-right", "70%");
+    $(".fact").css("margin-right", "33%");
+    $(".nav-buttons").css("margin-right", "33%");
+  })
+
+  $(".messages").click(() => {
+    console.log("clicked")
+    $(".slogan").addClass("hidden");
+    $(".search").addClass("hidden");
+    $("#modal-messages").removeClass("hidden");
+    $("#modal-messages").addClass("visible");
+    $("#modal-messages").css("clip-path", "circle(75%)");
     $(".photo").css("clip-path", "inset(0% 100% 0% 0%)");
     $(".blue-background").css("margin-right", "40%");
     $(".recycle").css("margin-right", "60%");
@@ -34,8 +45,4 @@ $("#submit").click((event) => {
   
   // click on signup button in the modal to close 
   // and ajax to add user to databse will go here 
-  $("#modal-signup").click(() => {
-    $("#modal-container").addClass("hidden");
-    const newUserEmail = $("#signup-email-field").val();
-    console.log(newUserEmail)
-  })
+  
