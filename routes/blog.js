@@ -1,15 +1,17 @@
 var express = require('express');
 var db = require("../models");
 var router = express.Router();
+var passport = require("../config/passport"); 
+
 
 router.get("/api/posts/", function(req, res) {
   db.Post.findAll({})
     .then(function(dbPost) {
-      res.json(dbPost);
+      res.render("blogs", { post: dbPost} );
     });
 });
-
-router.post("/api/posts", passport.authenticate("local"), function(req, res) {
+// passport.authenticate("local")
+router.post("/api/posts", function(req, res) {
   console.log(req.body);
   db.Post.create(req.body)
     .then(function(dbPost) {
