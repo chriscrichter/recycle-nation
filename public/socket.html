@@ -1,32 +1,92 @@
-<!doctype html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography-based</title>
+  <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Heebo&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+    <div class="page">
+        <div class="videos">
+            <div class="button">Videos</div>
+        </div>
+        <div class="tweets-blog"><div class="button tweet">Tweets/Blog</div></div>
+        <div class="name-slogan">
+            <p class="name">Recycle Nation</p>
+            <p class="slogan">Best recycling practices to avoid pollution</p>
+        </div>
+        <div class="twitter-feed">
+          <ul class=tweets></ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/js/socket.io.js"></script>
+    <script>
+      var socket = io();
+      var tweetList = $('ul.tweets');
+      function insertNewTweet(user, text) {
+        tweetList
+          .prepend('<li>' + user + ': ' + text + '</li>');
+      }
+      socket.on('new tweet', function(tweet) {
+        console.log(tweet); 
+      //console.log("received a new tweet emission", tweet.text);
+        insertNewTweet(tweet.user.screen_name, tweet.retweeted_status.text);
+      });
+// socket.on('new tweet', function(tweet) {
+// // console.log(tweet.user.screen_name);
+
+    </script> 
+  </body>
+</html>
+
+<!-- // //look at tweet object
+// socket.on('new tweet', function(tweet) {
+// // console.log(tweet.user.screen_name);
+// insertNewTweet(tweet); -->
+<!-- // socket.on('connect', function(connection) {
+  // console.log('socket connected');
+  // }); -->
+
+
+
+
+
+
+
+
+<!-- <!doctype html>
 <html>
   <head>
     <title>Socket.IO chat</title>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
+      
+
       .twitter-feed {
+        dislpay: flex; 
         background-color: #eeeeee; 
-        min-height: 400px; 
+        min-height: 200px; 
+        max-height: 200px;
+        overflow: scroll; 
+        max-width: 300px; 
+
       }
     </style>
        
   </head>
   <body>
-    <div class="twitter-feed">
-      <ul class=tweets></ul>
+    <div class="wrapper"> 
+      <div class="twitter-feed">
+        <ul class=tweets></ul>
+      </div>
     </div>
 
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
+   
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="/js/socket.io.js"></script>
     <script>
@@ -50,8 +110,10 @@
     });
     </script> 
   </body>
-</html>
+</html> -->
 
 
 <!-- let newTweet = $('p').text(json.stringify(tweet.text)); 
         // $('.twitter-feed').append(newTweet);  -->
+
+
