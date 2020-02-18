@@ -5,15 +5,13 @@ var io = require('socket.io')(http);
 var db = require("./models");
 var routes = require('./routes');
 var twitter = require("./services/twitter");
+const utils = require('./services/utils');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const mysql = require("mysql");
 
-
-
 var PORT = process.env.PORT || 8080;
-const supportedEnivornments = ['new york', 'chicago', 'los angeles', 'miami', 'seattle', 'portland'];
-// const supportedEnivornments = ['new york'];
+const supportedEnivornments = ['new york', 'chicago', 'los angeles', 'miami', 'seattle', 'boston', 'portland'];
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -37,16 +35,22 @@ app.use(routes.facts);
 app.use(routes.html);
 app.use(routes.blog);
 
-const getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
-
 io.on('connection', function(socket){
   console.log('a user connected witht he socket id', socket.id);
-  // add connection to the correct room for this user
-  socket.join(supportedEnivornments[getRandomInt(supportedEnivornments.length - 1)])
+  // add connection to a random room for this user
+  socket.join(supportedEnivornments[utils.getRandomInt(supportedEnivornments.length - 1)]);
+  // when a user wants to join a new room, leave all the rooms
+  // the user was subscribed to before and join the new room
+  socket.on('new room', function(newRoom) {
+    console.log("user selected a new room:", newRoom);
+    // leave current rooms
+    supportedEnivornments.forEach(env => socket.leave(env));
+    // join new room
+    socket.join(supportedEnivornments.find(e => e === newRoom));
+  })
 });
 
 //send a new tweet emission every 5000 milliseconds
-
 
 // const interval = setInterval(() => {
 //   console.log('emitting new mock tweet');
@@ -56,15 +60,18 @@ io.on('connection', function(socket){
 //   });
 // }, 5000);
 
-const twitterChannelConfigObject = supportedEnivornments.reduce((channels, env) => {
-  channels[env] = [env];
-  return channels;
-}, {});
+// make an object version of the supportedEnvironments array
+const supportedEnivornmentsObject = utils.objOfArraysForEachArrayItem(supportedEnivornments);
 
-const stream = twitter.createStreams(twitterChannelConfigObject);
+// use the object of supported environments to create a twitter stream
+// for each supported environment
+const streams = twitter.createStreams(supportedEnivornmentsObject);
 
+// assign each environment stream to a socket.io room, i.e.
+// when a new tweet comes in for a channel, send it to all the
+// socket connections in the room for that supported environment.
 supportedEnivornments.forEach(supportedEnv => {
-  stream.on('channels/'+supportedEnv, tweet => {
+  streams.on('channels/'+supportedEnv, tweet => {
     io.to(supportedEnv).emit('new tweet', tweet);
   });
 })
