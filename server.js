@@ -69,16 +69,13 @@ io.on('connection', function(socket){
 //   });
 // }, 5000);
 
-// make an object version of the supportedEnvironments array
+
 const supportedEnivornmentsObject = utils.objOfArraysForEachArrayItem(supportedEnivornments);
 
-// use the object of supported environments to create a twitter stream
-// for each supported environment
+
 const streams = twitter.createStreams(supportedEnivornmentsObject);
 
-// assign each environment stream to a socket.io room, i.e.
-// when a new tweet comes in for a channel, send it to all the
-// socket connections in the room for that supported environment.
+
 supportedEnivornments.forEach(supportedEnv => {
   streams.on('channels/'+supportedEnv, tweet => {
     io.to(supportedEnv).emit('new tweet', tweet);
