@@ -9,10 +9,14 @@
 </head>
 <body>
     <div class="page">
-        <div class="videos">
-            <div class="button">Videos</div>
+        <div class="info">
+            <button>Videos</button>
+            <button>Tweets/Blog</button>
+        </div>   
+        <div class="login-signup">
+            <button>Log In</button>
+            <button>Sign Up</button>
         </div>
-        <div class="tweets-blog"><div class="button tweet">Tweets/Blog</div></div>
         <div class="name-slogan">
             <p class="name">Recycle Nation</p>
             <p class="slogan">Best recycling practices to avoid pollution</p>
@@ -24,6 +28,25 @@
                 <input type="text" placeholder="batteries" id="input-field">
             </form>
         </div>
+        <div id="modal-container" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h2 id="modal-name">
+                  </h2>
+                </div>
+                <div class="modal-body">
+                  <h3>
+                    Description:
+                  </h3>
+                  <textarea id="description" cols="30" rows="10"></textarea>
+                  <div>
+                    <button id="save">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
 </body>
 </html>
