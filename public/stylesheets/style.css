@@ -12,6 +12,7 @@ body {
 
 /* ============ PAGE GRID ================== */
 .page {
+
     margin:0;
     padding: 0;
     display: grid;
@@ -332,10 +333,13 @@ button {
     transition: visibility 0s 0.3s, opacity 0.3s linear;
 }
 
-/* .twitter-feed {
+.twitter-feed {
     background-color: #eeeeee; 
     min-height: 200px; 
     max-height: 200px;
     overflow: scroll; 
     max-width: 300px; 
-} */
+}
+
+
+
