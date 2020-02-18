@@ -29,7 +29,10 @@ $(document).ready(function() {
       name: name,
       password: password
     })
-      .then(function() {
+      .then(function(data) {
+        console.log(data); 
+        sessionStorage.setItem("login", data);
+
        // window.location.replace("/");
         // If there's an error, log the error
       })

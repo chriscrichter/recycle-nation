@@ -9,9 +9,9 @@ router.post("/login", passport.authenticate("local"), function(req, res) {
   //console.log(res); 
   // console.log(req.body.name);
   // console.log(req.body.password); 
-  console.log('it worked signed in', req.user)
-  res.json(req.user);
-
+  //console.log('it worked signed in', req.user)
+  //res.json(req.user);
+  res.send('true');
 });
 
 // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to

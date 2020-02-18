@@ -7,11 +7,13 @@ var io = require('socket.io')(http);
 var db = require("./models");
 var routes = require('./routes');
 var twitter = require("./services/twitter");
+const utils = require('./services/utils');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const mysql = require("mysql");
 
 var PORT = process.env.PORT || 8080;
+const supportedEnivornments = ['new york', 'chicago', 'los angeles', 'miami', 'seattle', 'boston', 'portland'];
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -42,15 +44,23 @@ app.use(routes.blog);
 app.use(routes.api);
 
 
-app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html');
-});
-
 io.on('connection', function(socket){
   console.log('a user connected witht he socket id', socket.id);
+  // add connection to a random room for this user
+  socket.join(supportedEnivornments[utils.getRandomInt(supportedEnivornments.length - 1)]);
+  // when a user wants to join a new room, leave all the rooms
+  // the user was subscribed to before and join the new room
+  socket.on('new room', function(newRoom) {
+    console.log("user selected a new room:", newRoom);
+    // leave current rooms
+    supportedEnivornments.forEach(env => socket.leave(env));
+    // join new room
+    socket.join(supportedEnivornments.find(e => e === newRoom));
+  })
 });
 
-// send a new tweet emission every 5000 milliseconds
+//send a new tweet emission every 5000 milliseconds
+
 // const interval = setInterval(() => {
 //   console.log('emitting new mock tweet');
 //   io.emit('new tweet', {
@@ -59,14 +69,18 @@ io.on('connection', function(socket){
 //   });
 // }, 5000);
 
-// twitter.on('data', function(data) {
-//   console.log("got some new twitter data");
-//   io.emit('new tweet', data);
-// })
 
-// twitter.on('error', function(error) {
-//   throw error;
-// });
+const supportedEnivornmentsObject = utils.objOfArraysForEachArrayItem(supportedEnivornments);
+
+
+const streams = twitter.createStreams(supportedEnivornmentsObject);
+
+
+supportedEnivornments.forEach(supportedEnv => {
+  streams.on('channels/'+supportedEnv, tweet => {
+    io.to(supportedEnv).emit('new tweet', tweet);
+  });
+})
 
 db.sequelize.sync()
   .then(function() {
