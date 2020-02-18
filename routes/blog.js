@@ -8,8 +8,8 @@ router.get("/api/posts/", function(req, res) {
       res.json(dbPost);
     });
 });
-
-router.post("/api/posts", passport.authenticate("local"), function(req, res) {
+// , passport.authenticate("local")
+router.post("/api/posts", function(req, res) {
   console.log(req.body);
   db.Post.create(req.body)
     .then(function(dbPost) {
@@ -38,8 +38,8 @@ router.get("/api.posts", function(req, res){
     include: [db.User]
   }).then(res.json);
 });
-
-router.put("/api/posts", passport.authenticate("local"), function(req, res){
+// , passport.authenticate("local")
+router.put("/api/posts", function(req, res){
   const query = {
     where: {
       id:  req.body.id

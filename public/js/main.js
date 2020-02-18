@@ -34,8 +34,4 @@ $("#submit").click((event) => {
   
   // click on signup button in the modal to close 
   // and ajax to add user to databse will go here 
-  $("#modal-signup").click(() => {
-    $("#modal-container").addClass("hidden");
-    const newUserEmail = $("#signup-email-field").val();
-    console.log(newUserEmail)
-  })
+  

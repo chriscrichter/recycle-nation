@@ -10,7 +10,6 @@ var twitter = require("./services/twitter");
 const utils = require('./services/utils');
 const path = require('path');
 const exphbs = require('express-handlebars');
-const mysql = require("mysql");
 
 var PORT = process.env.PORT || 8080;
 const supportedEnivornments = ['new york', 'chicago', 'los angeles', 'miami', 'seattle', 'boston', 'portland'];
@@ -83,7 +82,7 @@ supportedEnivornments.forEach(supportedEnv => {
 })
 
 db.sequelize.sync()
-  .then(function() {
+.then(function() {
     http.listen(PORT, function(){
       console.log('listening on *:', PORT);
     });

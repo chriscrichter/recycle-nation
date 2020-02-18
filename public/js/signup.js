@@ -5,8 +5,15 @@ $(document).ready(function() {
   var passwordInput = $("input#password-input");
 
   // When the signup button is clicked, we validate the email and password are not blank
-  signUpForm.on("submit", function(event) {
-    event.preventDefault();
+  // signUpForm.on("submit", function(event) {
+  //   event.preventDefault();
+   
+  // });
+
+  $("#modal-signup-button").click(() => {
+    $("#modal-container").addClass("hidden");
+    // const newUserEmail = $(".signup-email-field").val();
+    // console.log(newUserEmail)
     var userData = {
       name: emailInput.val().trim(),
       password: passwordInput.val().trim()
@@ -20,7 +27,7 @@ $(document).ready(function() {
     signUpUser(userData.name, userData.password);
     emailInput.val("");
     passwordInput.val("");
-  });
+  })
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors

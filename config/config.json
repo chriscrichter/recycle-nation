@@ -1,14 +1,15 @@
 {
   "development": {
     "username": "root",
-    "password": "Columbia20",
-    "database": "recycle_db",
+    "password": "sasha1988",
+    "database": "recycle_DB",
     "host": "127.0.0.1",
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "sasha1988",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
