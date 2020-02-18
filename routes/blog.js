@@ -10,6 +10,8 @@ router.get("/api/posts/", function(req, res) {
       res.render("blogs", { post: dbPost} );
     });
 });
+
+
 // passport.authenticate("local")
 router.post("/api/posts", function(req, res) {
   console.log(req.body);
