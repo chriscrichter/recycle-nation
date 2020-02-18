@@ -170,3 +170,12 @@ body {
         background-image: url(icon-b.png);
     }
 }
+
+
+.twitter-feed {
+    background-color: #eeeeee; 
+    min-height: 200px; 
+    max-height: 200px;
+    overflow: scroll; 
+    max-width: 300px; 
+}

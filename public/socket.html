@@ -1,57 +1,57 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Socket.IO chat</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-      .twitter-feed {
-        background-color: #eeeeee; 
-        min-height: 400px; 
-      }
-    </style>
-       
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography-based</title>
+  <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Heebo&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="stylesheets/style.css">
   </head>
   <body>
-    <div class="twitter-feed">
-      <ul class=tweets></ul>
+    <div class="page">
+      <div class="videos">
+          <div class="button">Videos</div>
+      </div>
+      <div class="tweets-blog">
+        <div class="button tweet">Tweets/Blog</div>
+      </div>
+      <div class="name-slogan">
+        <p class="name">Recycle Nation</p>
+        <p class="slogan">Best recycling practices to avoid pollution</p>
+      </div>
+      <label for="cars">Choose a room to join</label>
+      <select id="rooms">
+        <option id="1" value="new york">New York</option>
+        <option id="2" value="san franciso">San Franciso</option>
+        <option id= "3" value="miami">Miami</option>
+        <option id="4" value="seattle">Seattle</option>
+        <option id="5"value="portland">Portland</option>
+        <option id="6" value="chicago">Chicago</option>
+        <option id="7" value="los angelos">los Angelos</option>
+      </select>
+      <div class="twitter-feed">
+        <ul class=tweets></ul>
+      </div>
     </div>
-
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="/js/socket.io.js"></script>
+    <script src="/js/twitter.js"></script>
     <script>
+      var socket = io();
       var tweetList = $('ul.tweets');
-      function insertNewTweet(text, user) {
+      function insertNewTweet(user, text) {
         tweetList
           .prepend('<li>' + user + ': ' + text + '</li>');
       }
-      var socket = io();
-      socket.on('connect', function(connection) {
-        console.log('socket connected');
-      });
       socket.on('new tweet', function(tweet) {
-        console.log("received a new tweet emission", tweet.text);
-        insertNewTweet(tweet.text, tweet.user);
+        console.log(tweet); 
+        insertNewTweet(tweet.user.screen_name, tweet.retweeted_status.text);
       });
-    //look at tweet object
-      socket.on('new tweet', function(tweet) {
-      console.log("received a new tweet emission", tweet);
-      insertNewTweet(tweet);
-    });
+      $("#rooms").change(function() {
+        console.log("location selected", this.value);
+        socket.emit('new room', this.value);
+      });
     </script> 
   </body>
 </html>
-
-
-<!-- let newTweet = $('p').text(json.stringify(tweet.text)); 
-        // $('.twitter-feed').append(newTweet);  -->

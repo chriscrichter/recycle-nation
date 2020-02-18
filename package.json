@@ -26,7 +26,8 @@
     "mysql2": "^2.1.0",
     "sequelize": "^5.21.4",
     "socket.io": "^2.3.0",
-    "twitter": "^1.7.1"
+    "twitter": "^1.7.1",
+    "twitter-stream-channels": "^1.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
