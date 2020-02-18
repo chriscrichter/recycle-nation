@@ -39,8 +39,8 @@ app.use(routes.user);
 app.use(routes.facts);
 app.use(routes.html);
 app.use(routes.blog);
+app.use(routes.api);
 
-require("./routes/api-routes.js")(app);
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
@@ -51,13 +51,13 @@ io.on('connection', function(socket){
 });
 
 // send a new tweet emission every 5000 milliseconds
-const interval = setInterval(() => {
-  console.log('emitting new mock tweet');
-  io.emit('new tweet', {
-    text: 'here is a sample tweet',
-    user: 'some user'
-  });
-}, 5000);
+// const interval = setInterval(() => {
+//   console.log('emitting new mock tweet');
+//   io.emit('new tweet', {
+//     text: 'here is a sample tweet',
+//     user: 'some user'
+//   });
+// }, 5000);
 
 // twitter.on('data', function(data) {
 //   console.log("got some new twitter data");

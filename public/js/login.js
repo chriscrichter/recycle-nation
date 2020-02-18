@@ -8,32 +8,33 @@ $(document).ready(function() {
   loginForm.on("submit", function(event) {
     event.preventDefault();
     var userData = {
-      email: emailInput.val().trim(),
+      name: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
-
-    if (!userData.email || !userData.password) {
+    console.log(userData)
+    if (!userData.name || !userData.password) {
       return;
     }
-
+    console.log(userData.name, userData.password); 
     // If we have an email and password we run the loginUser function and clear the form
-    loginUser(userData.email, userData.password);
+    loginUser(userData.name, userData.password);
     emailInput.val("");
     passwordInput.val("");
+
   });
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
-  function loginUser(email, password) {
-    $.post("/api/login", {
-      email: email,
+  function loginUser(name, password) {
+    $.post("/login", {
+      name: name,
       password: password
     })
       .then(function() {
-        window.location.replace("/members");
+       // window.location.replace("/");
         // If there's an error, log the error
       })
       .catch(function(err) {
-        console.log(err);
+       console.log(err);
       });
   }
 });
