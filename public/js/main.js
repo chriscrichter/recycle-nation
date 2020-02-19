@@ -75,6 +75,7 @@ $("#signup-modal").removeClass("invisible");
 $("#signup-modal").addClass("seen");
 $("#signup-modal").css("clip-path", "circle(75%)");
 changeModal();
+
 })
 
 // LOGIN BUTTON

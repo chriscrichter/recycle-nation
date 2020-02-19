@@ -1,6 +1,4 @@
-<!-- Pass in data from blog.js -->
-<ul>
-  {{#each post}}
+<!-- See all posts  -->
   	<li>
   		<p><span class="label">title:</span> {{this.title}}</p>
       <p><span class="label">Body</span> {{this.body}}</p>
@@ -10,5 +8,3 @@
 
       <a href="/{{this.id}}">Update this quote</a>
   	</li>
-  {{/each}}
-</ul>

@@ -7,36 +7,18 @@ var passport = require("../config/passport");
 
 
 router.get("/api/posts/", function(req, res) {
-  
-  db.Post.findAll({})
+  db.Post.findAll({raw:true})
     .then(function(dbPost) {
-      let posts = [
-        {
-          title: 'a post'
-        },
-        {
-          title: 'another post'
-        }
-      ]
-      res.render("blogs", { posts: posts} );
+      console.log(dbPost); 
+     // console.log(dbPost); 
+      var hbsObject = {
+        posts: dbPost
+      }
+      // console.log(hbsObject); 
+      res.render("index", hbsObject);
      // res.render("index", { post: dbPost} );
     });
 });
-
-// Create all our routes and set up logic within those routes where required.
-// router.get("/", function(req, res) {
-//   console.log("db", db);
-//   db.Post.all(function(data) {
-//     var hbsObject = {
-//       posts: data
-//     };
-//     console.log(data);
-//     res.render("index", hbsObject);
-//     console.log(hbsObject); 
-//   });
-// });
-
-// passport.authenticate("local")
 
 router.post("/api/posts", function(req, res) {
   console.log(req.body);
@@ -78,3 +60,21 @@ router.put("/api/posts", function(req, res){
 });
 
 module.exports = router
+
+
+
+
+
+
+
+
+
+// router.get("/", function(req, res) {
+//   // res.json(db.fact);  
+//    db.Fact.findAll({})
+//      .then((facts)=>{
+ 
+//        //res.render("facts",facts); 
+//      })
+ 
+//  });
