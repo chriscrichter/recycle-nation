@@ -15,17 +15,17 @@ router.get("/api/posts/", function(req, res) {
 });
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/", function(req, res) {
-  console.log("db", db);
-  db.Post.all(function(data) {
-    var hbsObject = {
-      posts: data
-    };
-    console.log(data);
-    res.render("index", hbsObject);
-    console.log(hbsObject); 
-  });
-});
+// router.get("/", function(req, res) {
+//   console.log("db", db);
+//   db.Post.all(function(data) {
+//     var hbsObject = {
+//       posts: data
+//     };
+//     console.log(data);
+//     res.render("index", hbsObject);
+//     console.log(hbsObject); 
+//   });
+// });
 
 // passport.authenticate("local")
 

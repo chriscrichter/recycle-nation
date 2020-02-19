@@ -45,10 +45,13 @@ $("#submit").click((event) => {
   })
 
   $('.messages').click(() => {
-
+    $('<p>')
     $("#messages-container").removeClass('hidden');
     $("#messages-container").addClass('visible');
+    $("#messages-container").css("color", "black")
+
     $("#messages-container").text('HEllo WOrld');
+
 
 
 
