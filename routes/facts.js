@@ -6,14 +6,15 @@ var router = express.Router();
 
 
 router.post("/facts", function(req, res) {
-  // res.json(db.fact);  
+  // console.log('facts post') 
    db.Fact.create(req.body)
-     .then((facts)=>{
-      res.json(facts); 
-       //res.render("facts",facts); 
+     .then(function(fact){
+      // res.json(fact); 
+       res.render("index",facts); 
      })
  
  });
 
 
-module.exports = express.Router();
+
+module.exports = router;

@@ -3,21 +3,37 @@ var express = require('express');
 var db = require("../models");
 var router = express.Router();
 var passport = require("../config/passport"); 
-
+var service = require('../services/utils'); 
 
 
 
 router.get("/", function(req, res) {
- // res.json(db.fact);  
-  db.Fact.findAll({})
-    .then((facts)=>{
+  random = service.getRandomInt(2); 
+  console.log(random);
+ //res.json(db.fact);  
+  db.Fact.findOne({
+    where:
+      { id: random }
+  })
+    .then(function(fact){
+   // console.log(fact.dataValuesds)
+   res.render("index", fact)
 
-      //res.render("facts",facts); 
-    })
-
-});
+  })
+})
 
 module.exports = router; 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
