@@ -243,6 +243,7 @@ button {
 /* ============ MODAL ================== */
 
 .modal {
+
     max-width: 100%;
     max-height: 100%;
     grid-row: 2 / 10;
@@ -326,7 +327,8 @@ button {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.8s linear;
-}                
+}  
+              
 .hidden {
     visibility: hidden;
     opacity: 0;
@@ -342,4 +344,8 @@ button {
 }
 
 
-
+#messages-container {
+    width: 100px; 
+    height: 100px; 
+    background-color: pink;
+}

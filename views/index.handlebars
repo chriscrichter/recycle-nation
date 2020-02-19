@@ -20,6 +20,7 @@
   </form>  
   <div class="fact">The EPA estimates that 75% of the American waste stream is recyclable, but we only recycle about 30% of it.</div>
   <div id="modal-container" class="modal hidden">
+      
       <div class="close">
           <div>&times;</div>
       </div>
@@ -32,3 +33,18 @@
       </form>
       <button type="submit" id="modal-signup-button" class="signup-button">Sign Up</button>  
   </div>
+    <p> hello world </p>
+    <div id="messages-container" class="modal">
+      <div class="close">
+          <div>&times;</div>
+      </div>
+        <ul>
+        {{#each post}}
+                {{> posts/post-block}}
+        {{/each}}  
+
+        </ul>
+      <button type="submit" id="modal-signup-button" class="signup-button">Sign Up</button>  
+    </div>
+
+</div>
