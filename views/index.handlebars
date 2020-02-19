@@ -1,9 +1,39 @@
-<!--
+
+ <div id="messages-container" class="modal visible">SHOW ME GOD DAMNIT
+      <p>hello world</p>
+      <p>alex is heres</p>
+      <div class="close">
+        <div>&times;</div>
+      </div>
+      {{!-- <ul>
+        {{#each post}}
+                {{> posts/post-block}}
+        {{/each}}  
+      </ul> --}}
+      <button type="submit" id="modal-signup-button" class="signup-button">Sign Up</button>  
+    </div>
+    <div id="modal-container" class="modal hidden">
+      <div class="close">
+          <div>&times;</div>
+      </div>
+      <form class="modal-form signup">
+          <!-- <input type="text" placeholder="John" id="info-field">
+          <input type="text" placeholder="Smith" id="info-field"> -->
+          <input type="email" placeholder="johnsmith@gmail.com" class="info-field" class="signup-email-field" id="email-input" >
+          <input type="password" placeholder="password" class="info-field" class="signup-password-field" id="password-input">
+          <!-- <input type="text" placeholder="11237" class="info-field" id="signup-zip-field"> -->
+      </form>
+      <button type="submit" id="modal-signup-button" class="signup-button">Sign Up</button>  
+    </div>
+</div>
+
+    <!--
 <h1>Recycling Facts!</h1>
   -->
   {{#each facts}}
   	<h4>
-  	   <!--<p>ID: {{this.id}}</p>-->
        <center><p>Recycling Fact: {{this.fact}}</p></center>
   	</h4>
   {{/each}}
+
+

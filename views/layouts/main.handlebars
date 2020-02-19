@@ -1,9 +1,3 @@
-
-		
-
-		{{!-- <div class="fact"><center>{</center></div> --}}
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recycle Nation</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.css" rel="stylesheet"/>
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
@@ -29,13 +25,53 @@
             <div class="line1"><p>Best recycling practices</p></div>
             <div class="line2"><p>to avoid pollution</p></div>
         </div>
-        <form class="search">
-            <input id="submit" type="submit" value="">
-            <!-- <i><img src="search32.png" alt="search icon"></i> -->
-            <input type="text" placeholder="batteries" id="input-field">
-        </form>  
-        <div class="fact">{{{ body }}}</div>
+     
+        <div class="search">
+            <form class="search-field">
+               <!-- <input id="submit" type="submit" value="">
+                 <i><img src="search32.png" alt="search icon"></i> 
+                <input type="text" placeholder="batteries" id="input-field"> -->
+                 <div class="card-header">
+            <h3>What do you want to recycle?</h3>
+          
+            <select class="selectpicker" id="material-search" data-live-search="true" width="400">
+              <option>Choose material</option>
+              <option>Acids</option>
+              <option>Adult Toys</option>
+              <option>Aluminum</option>
+              <option>Batteries</option>
+              <option>Cables</option>
+              <option>Calculators</option>
+              <option>Car Batteries</option>
+              <option>Carpet</option>
+              <option>Computer</option>             
+              <option>Glass</option>
+              <option>Medal</option>        
+              <option>Paper</option>             
+              <option>Plastic</option>
+              <option>Tires</option>       
+          </select>
+
+            <div class="text-center">
+              <button class="btn btn-primary btn-md" id="search-btn">
+                <span class="fa fa-search"></span> Search</button>
+          </div>
+       </div>
+            </form>
+        </div>
+    </div>
+
+
+        <div class="fact"><center>{{{ body }}}</center></div>
+
+     <br>
+            <div class="well" id="stats">
+              <h5 id="material"></h5>
+              <h6 id="description"></h6>
+            </div>
+
         <div id="modal-container" class="modal hidden">
+
             <div class="close">
                 <div>&times;</div>
             </div>
@@ -47,7 +83,9 @@
                 <!-- <input type="text" placeholder="11237" class="info-field" id="signup-zip-field"> -->
             </form>
             <button type="submit" id="modal-signup-button" class="signup-button">Sign Up</button>  
+
         </div>
+<<<<<<< HEAD
         <div id="modal-messages" class="modal hidden">
             <div class="close">
                 <div>&times;</div>
@@ -56,8 +94,15 @@
             <div>{{> post myTitle="My Title"}}</div>
             {{ /each }}
         </div>
+=======
+
+>>>>>>> master
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.js"></script>
     <script src="js/main.js"></script>
     <script src="js/signup.js"></script>
+    <script src="view.js" type="text/javascript"></script>
 </body>
 </html>

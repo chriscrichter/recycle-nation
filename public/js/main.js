@@ -40,6 +40,20 @@ $("#submit").click((event) => {
   // click on close button to close the modal
   $(".close").click(() => {
     $("#modal-container").addClass("hidden");
+
+  })
+
+  $('.messages').click(() => {
+    $('<p>')
+    $("#messages-container").removeClass('hidden');
+    $("#messages-container").addClass('visible');
+    $("#messages-container").css("color", "black")
+
+    $("#messages-container").text('HEllo WOrld');
+
+
+
+
   })
   
   // click on signup button in the modal to close 

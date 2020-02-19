@@ -4,9 +4,13 @@ var router = express.Router();
 var passport = require("../config/passport"); 
 
 
+
+
 router.get("/api/posts/", function(req, res) {
+  
   db.Post.findAll({})
     .then(function(dbPost) {
+<<<<<<< HEAD
       let posts = [
         {
           title: 'a post'
@@ -16,9 +20,27 @@ router.get("/api/posts/", function(req, res) {
         }
       ]
       res.render("blogs", { posts: posts} );
+=======
+      res.render("index", { post: dbPost} );
+>>>>>>> master
     });
 });
-// , passport.authenticate("local")
+
+// Create all our routes and set up logic within those routes where required.
+// router.get("/", function(req, res) {
+//   console.log("db", db);
+//   db.Post.all(function(data) {
+//     var hbsObject = {
+//       posts: data
+//     };
+//     console.log(data);
+//     res.render("index", hbsObject);
+//     console.log(hbsObject); 
+//   });
+// });
+
+// passport.authenticate("local")
+
 router.post("/api/posts", function(req, res) {
   console.log(req.body);
   db.Post.create(req.body)
