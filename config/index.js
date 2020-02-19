@@ -9,10 +9,10 @@ const twitter = {
 
 const envConfigs = {
   "development": {
-    "username": "root",
-    "password": "Theoffice92",
-    "database": "recycle_DB",
-    "host": "127.0.0.1",
+    "username": "bm8ozsqt8ehomlw5",
+    "password": "xr1wsmn48fb916jq",
+    "database": "gajb8m09t9ub53b5",
+    "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {

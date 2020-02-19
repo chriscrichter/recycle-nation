@@ -12,7 +12,6 @@ const utils = require('./services/utils');
 const mysql = require("mysql");
 const path = require('path');
 
-
 var PORT = process.env.PORT || 8080;
 const supportedEnivornments = ['new york', 'chicago', 'los angeles', 'miami', 'seattle', 'boston', 'portland'];
 
@@ -49,8 +48,6 @@ app.use(routes.api);
 
 require("./routes/api-routes.js")(app);
 
-
-
 var connection = mysql.createConnection({
   host: "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
   port: 3306,
@@ -79,13 +76,6 @@ app.get("/", function(req, res) {
   });
 });
 
-
-
-
-
-
-
-
 io.on('connection', function(socket){
   console.log('a user connected witht he socket id', socket.id);
   // add connection to a random room for this user
@@ -111,12 +101,9 @@ io.on('connection', function(socket){
 //   });
 // }, 5000);
 
-
 const supportedEnivornmentsObject = utils.objOfArraysForEachArrayItem(supportedEnivornments);
 
-
 const streams = twitter.createStreams(supportedEnivornmentsObject);
-
 
 supportedEnivornments.forEach(supportedEnv => {
   streams.on('channels/'+supportedEnv, tweet => {
