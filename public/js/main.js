@@ -1,62 +1,69 @@
-// Collectiing val from input field for what item to search in the database
-// ajax will go inside that click
+// click through buttons?
+
+// SHOW RESULTS
 $("#submit").click((event) => {
-    const itemToSearch = $("#item-search-input-field").val();
-    event.preventDefault();
-    console.log(itemToSearch)
-  })
-  
-  // click event that hides name-slogan-search
-  // and displays modal-container instead
-  $("#signup-button").click(() => {
-    $("#modal-container").removeClass("hidden");
-    $("#modal-container").addClass("visible");
-    $("#modal-container").css("clip-path", "circle(75%)");
-    $(".name-slogan").css("display", "none");
-    $(".search").css("display", "none");
-    $(".slogan").addClass("hidden");
-    $(".photo").css("clip-path", "inset(0% 100% 0% 0%)");
-    $(".blue-background").css("margin-right", "40%");
-    $(".recycle").css("margin-right", "60%");
-    $(".nation").css("margin-right", "70%");
-    $(".fact").css("margin-right", "33%");
-    $(".nav-buttons").css("margin-right", "33%");
-  })
+  const itemToSearch = $("#item-search-input-field").val();
+  event.preventDefault();
+  changeModal();
+  $("#results-modal").removeClass("hidden");
+  $("#results-modal").addClass("visible");
+  $("#results-modal").css("clip-path", "circle(75%)");
+  console.log(itemToSearch)
+})
 
-  $(".messages").click(() => {
-    console.log("clicked")
-    $(".slogan").addClass("hidden");
-    $(".search").addClass("hidden");
-    $("#modal-messages").removeClass("hidden");
-    $("#modal-messages").addClass("visible");
-    $("#modal-messages").css("clip-path", "circle(75%)");
-    $(".photo").css("clip-path", "inset(0% 100% 0% 0%)");
-    $(".blue-background").css("margin-right", "40%");
-    $(".recycle").css("margin-right", "60%");
-    $(".nation").css("margin-right", "70%");
-    $(".fact").css("margin-right", "33%");
-    $(".nav-buttons").css("margin-right", "33%");
-  })
-  
-  // click on close button to close the modal
-  $(".close").click(() => {
-    $("#modal-container").addClass("hidden");
+const changeModal = () => {
+$(".search").css("display", "none");
+$(".slogan").addClass("hidden");
+$(".photo").css("clip-path", "inset(0% 100% 0% 0%)");
+$(".blue-background").css("margin-right", "40%");
+$(".recycle").css("margin-right", "60%");
+$(".nation").css("margin-right", "70%");
+$(".fact").css("margin-right", "33%");
+$(".nav-buttons").css("margin-right", "33%");
+}
 
-  })
+// MODAL CLOSE ELEMENT
+$(".close").click(() => {
+$(".modal").addClass("hidden");
+})
 
-  $('.messages').click(() => {
-    $('<p>')
-    $("#messages-container").removeClass('hidden');
-    $("#messages-container").addClass('visible');
-    $("#messages-container").css("color", "black")
+// TWEETS
+$(".tweets").click(() => {
+$("#tweets-modal").removeClass("hidden");
+$("#tweets-modal").addClass("visible");
+$("#tweets-modal").css("clip-path", "circle(75%)");
+changeModal();
+})
 
-    $("#messages-container").text('HEllo WOrld');
+// MESSAGE BOARD
+$(".messages").click(() => {
+$("#messages-modal").removeClass("hidden");
+$("#messages-modal").addClass("visible");
+$("#messages-modal").css("clip-path", "circle(75%)");
+changeModal();
+})
 
+// ADD MESSAGE 
+$(".add-message-button").click(() => {
+$("#add-messages-modal").removeClass("hidden");
+$("#add-messages-modal").addClass("visible");
+$("#add-messages-modal").css("clip-path", "circle(75%)");
+// $(".modal").addClass("hidden");
+changeModal();
+})
 
+// SIGNUP BUTTON
+$("#signup-button").click(() => {
+$("#signup-modal").removeClass("hidden");
+$("#signup-modal").addClass("visible");
+$("#signup-modal").css("clip-path", "circle(75%)");
+changeModal();
+})
 
-
-  })
-  
-  // click on signup button in the modal to close 
-  // and ajax to add user to databse will go here 
-  
+// SIGNUP BUTTON
+$(".login").click(() => {
+$("#login-modal").removeClass("hidden");
+$("#login-modal").addClass("visible");
+$("#login-modal").css("clip-path", "circle(75%)");
+changeModal();
+})

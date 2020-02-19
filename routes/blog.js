@@ -10,7 +10,16 @@ router.get("/api/posts/", function(req, res) {
   
   db.Post.findAll({})
     .then(function(dbPost) {
-      res.render("index", { post: dbPost} );
+      let posts = [
+        {
+          title: 'a post'
+        },
+        {
+          title: 'another post'
+        }
+      ]
+      res.render("blogs", { posts: posts} );
+     // res.render("index", { post: dbPost} );
     });
 });
 
