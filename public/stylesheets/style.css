@@ -12,6 +12,7 @@ body {
 
 /* ============ PAGE GRID ================== */
 .page {
+
     margin:0;
     padding: 0;
     display: grid;
@@ -24,7 +25,7 @@ body {
     grid-column: 1 / 4;
     grid-row: 1 / -1;
     z-index: 10;
-    background-image: url(ocean.jpg);
+    background-image: url(/ocean.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -131,7 +132,7 @@ button {
 #submit {
     border: none;
     background-color: transparent;
-    background-image: url(icon-b.png);
+    background-image: url(/icon-b.png);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
@@ -231,17 +232,27 @@ button {
 .fact {
     grid-column: 5 / -1;
     grid-row: 9 / 10;
-}
-
-.fact {
     text-align: center;
     align-self: end;
     padding: 0 5%;
+    padding: 0 5%;
 }
+
+h5 {
+    font-size: 18px;
+    font-weight: bold; 
+    margin-left: 600px;
+  }
+  
+h6 {
+    font-size: 16px;
+    margin-left: 600px;
+  }
 
 /* ============ MODAL ================== */
 
-#modal-container {
+.modal {
+
     max-width: 100%;
     max-height: 100%;
     grid-row: 2 / 10;
@@ -325,17 +336,25 @@ button {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.8s linear;
-}                
+}  
+              
 .hidden {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 0.3s, opacity 0.3s linear;
 }
 
-/* .twitter-feed {
+.twitter-feed {
     background-color: #eeeeee; 
     min-height: 200px; 
     max-height: 200px;
     overflow: scroll; 
     max-width: 300px; 
-} */
+}
+
+
+#messages-container {
+    width: 100px; 
+    height: 100px; 
+    background-color: pink;
+}
