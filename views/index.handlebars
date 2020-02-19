@@ -43,9 +43,7 @@
     </div>
     <div class="fact">
       {{#each facts}}
-        <h4>
-          <center><p>Recycling Fact: {{this.fact}}</p></center>
-        </h4>
+        {{> facts/fact-block}}
       {{/each}}
     </div>
     <!-- ========= RESULTS ======== -->

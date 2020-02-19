@@ -61,6 +61,15 @@ changeModal();
 
 })
 
+
+
+
+
+
+
+
+
+
 // $("#modal-signup-button").click(() =>{
 //   event.preventDefault();
 //   let newUser = {
@@ -79,9 +88,3 @@ changeModal();
 // })
 
 // SIGNUP BUTTON
-$(".login").click(() => {
-$("#login-modal").removeClass("hidden");
-$("#login-modal").addClass("visible");
-$("#login-modal").css("clip-path", "circle(75%)");
-changeModal();
-})
