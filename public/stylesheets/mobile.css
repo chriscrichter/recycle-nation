@@ -91,9 +91,9 @@ button {
 
 .search {
     grid-column: 5 / -1;
-    grid-row: 5 / 6;
+    grid-row: 4 / 7;
     width: 80%;
-    margin: 15% auto 0% auto;
+    margin: 10% auto;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 75% 25%;
@@ -186,7 +186,7 @@ button {
 /* main grid */
 .slogan {
     grid-column: 5 / -1;
-    grid-row: 3 / 5;
+    grid-row: 2 / 4;
 }
 
 /* internal grid */
@@ -194,7 +194,7 @@ button {
     display: grid;
     margin-left: 16%;
     grid-template-columns: 10% 10% 60% 10% 10%;
-    margin-top: 0;
+    margin-top: 13%;
 }
 
 .slogan {
@@ -233,7 +233,7 @@ button {
 /* grid */
 .fact {
     grid-column: 5 / -1;
-    grid-row: 6 / 8;
+    grid-row: 7 / 8;
 }
 
 .fact {
@@ -244,7 +244,7 @@ button {
 
 /* ============ MODAL ================== */
 
-.modal {
+.information {
     max-width: 100%;
     max-height: 100%;
     grid-row: 2 / 10;
@@ -287,7 +287,7 @@ button {
     outline: none;
 }
 
-.close {
+.closing-x{
     color: white;
     font-size: 25px;
     display: flex;
@@ -297,7 +297,7 @@ button {
     margin: 5%;
 }
 
-.close:active {
+.closing-x:active {
     transform: translateY(1px); 
 }
 
@@ -324,12 +324,12 @@ button {
 
 /* ============ VISIBILITY ================== */
 
-.visible {
+.seen {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.8s linear;
 }                
-.hidden {
+.invisible {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 0.3s, opacity 0.3s linear;
