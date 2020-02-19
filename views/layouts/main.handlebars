@@ -52,7 +52,9 @@
             <div class="close">
                 <div>&times;</div>
             </div>
-            
+            {{ #each posts}}
+            <div>{{> post myTitle="My Title"}}</div>
+            {{ /each }}
         </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/main.js"></script>

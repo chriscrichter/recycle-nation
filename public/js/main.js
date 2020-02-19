@@ -24,7 +24,6 @@ $("#submit").click((event) => {
   })
 
   $(".messages").click(() => {
-    console.log("clicked")
     $(".slogan").addClass("hidden");
     $(".search").addClass("hidden");
     $("#modal-messages").removeClass("hidden");

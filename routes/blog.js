@@ -7,7 +7,15 @@ var passport = require("../config/passport");
 router.get("/api/posts/", function(req, res) {
   db.Post.findAll({})
     .then(function(dbPost) {
-      res.render("blogs", { post: dbPost} );
+      let posts = [
+        {
+          title: 'a post'
+        },
+        {
+          title: 'another post'
+        }
+      ]
+      res.render("blogs", { posts: posts} );
     });
 });
 // , passport.authenticate("local")
