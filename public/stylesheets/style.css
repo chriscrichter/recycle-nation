@@ -359,11 +359,7 @@ button {
     grid-column: 1 / 4;
     grid-row: 1 / -1;
     z-index: 10;
-<<<<<<< HEAD
     background-image: url(../assets/images/ocean.jpg);
-=======
-    background-image: url(/ocean.jpg);
->>>>>>> master
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -488,11 +484,7 @@ button {
 #submit {
     border: none;
     background-color: transparent;
-<<<<<<< HEAD
     background-image: url(../assets/images/icon-b.png);
-=======
-    background-image: url(/icon-b.png);
->>>>>>> master
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
@@ -710,18 +702,7 @@ h6 {
     max-height: 200px;
     overflow: scroll; 
     max-width: 300px; 
-<<<<<<< HEAD
-} */
+} 
 
 }
 
-=======
-}
-
-
-#messages-container {
-    width: 100px; 
-    height: 100px; 
-    background-color: pink;
-}
->>>>>>> master
