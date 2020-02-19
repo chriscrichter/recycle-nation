@@ -22,7 +22,6 @@ router.post("/api/signup", function(req, res) {
   .then(function(response) {
     res.json(response)
   })
- 
 });
 
 // Route for logging user out
