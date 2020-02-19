@@ -10,7 +10,6 @@ router.get("/api/posts/", function(req, res) {
   
   db.Post.findAll({})
     .then(function(dbPost) {
-<<<<<<< HEAD
       let posts = [
         {
           title: 'a post'
@@ -20,9 +19,7 @@ router.get("/api/posts/", function(req, res) {
         }
       ]
       res.render("blogs", { posts: posts} );
-=======
-      res.render("index", { post: dbPost} );
->>>>>>> master
+     // res.render("index", { post: dbPost} );
     });
 });
 

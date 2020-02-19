@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recycle Nation</title>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/mobile.css">
+    <link rel="stylesheet" href="stylesheets/desktop.css">
 </head>
 <body>
     <div class="page">
@@ -25,78 +26,100 @@
             <div class="line1"><p>Best recycling practices</p></div>
             <div class="line2"><p>to avoid pollution</p></div>
         </div>
-     
         <div class="search">
             <form class="search-field">
-               <!-- <input id="submit" type="submit" value="">
-                 <i><img src="search32.png" alt="search icon"></i> 
-                <input type="text" placeholder="batteries" id="input-field"> -->
-                 <div class="card-header">
-            <h3>What do you want to recycle?</h3>
-          
-            <select class="selectpicker" id="material-search" data-live-search="true" width="400">
-              <option>Choose material</option>
-              <option>Acids</option>
-              <option>Adult Toys</option>
-              <option>Aluminum</option>
-              <option>Batteries</option>
-              <option>Cables</option>
-              <option>Calculators</option>
-              <option>Car Batteries</option>
-              <option>Carpet</option>
-              <option>Computer</option>             
-              <option>Glass</option>
-              <option>Medal</option>        
-              <option>Paper</option>             
-              <option>Plastic</option>
-              <option>Tires</option>       
-          </select>
-
-            <div class="text-center">
-              <button class="btn btn-primary btn-md" id="search-btn">
-                <span class="fa fa-search"></span> Search</button>
-          </div>
-       </div>
-            </form>
-        </div>
-    </div>
-
-
-        <div class="fact"><center>{{{ body }}}</center></div>
-
-     <br>
-            <div class="well" id="stats">
-              <h5 id="material"></h5>
-              <h6 id="description"></h6>
+              <div class="card-header">
+                <h3>What do you want to recycle?</h3>
+                <select class="selectpicker" id="material-search" data-live-search="true" width="400">
+                    <option>Choose material</option>
+                    <option>Acids</option>
+                    <option>Adult Toys</option>
+                    <option>Aluminum</option>
+                    <option>Batteries</option>
+                    <option>Cables</option>
+                    <option>Calculators</option>
+                    <option>Car Batteries</option>
+                    <option>Carpet</option>
+                    <option>Computer</option>             
+                    <option>Glass</option>
+                    <option>Metal</option>        
+                    <option>Paper</option>             
+                    <option>Plastic</option>
+                    <option>Tires</option>       
+                </select>
+                <div class="text-center">
+                    <button class="btn btn-primary btn-md" id="search-btn">
+                    <span class="fa fa-search"></span> Search</button>
+                </div>
             </div>
-
-        <div id="modal-container" class="modal hidden">
-
+        </form>
+    </div>
+    <div class="fact">{{{ body }}}<div>
+    <!-- ========= RESULTS ======== -->
+    <div id="results-modal" class="modal hidden">
+        <div class="close">
+            <div>&times;</div>
+        </div>
+        <div class="well" id="stats">
+            <h5 id="material"></h5>
+            <h6 id="description"></h6>
+            </div>
+    </div>
+        <!-- ========= TWEETS ======== -->
+        <div id="tweets-modal" class="modal hidden">
             <div class="close">
                 <div>&times;</div>
             </div>
             <form class="modal-form signup">
-                <!-- <input type="text" placeholder="John" id="info-field">
-                <input type="text" placeholder="Smith" id="info-field"> -->
                 <input type="email" placeholder="johnsmith@gmail.com" class="info-field" class="signup-email-field" id="email-input" >
                 <input type="password" placeholder="password" class="info-field" class="signup-password-field" id="password-input">
-                <!-- <input type="text" placeholder="11237" class="info-field" id="signup-zip-field"> -->
-            </form>
-            <button type="submit" id="modal-signup-button" class="signup-button">Sign Up</button>  
-
+            </form>  
         </div>
-<<<<<<< HEAD
-        <div id="modal-messages" class="modal hidden">
+        <!-- ========= MESSAGES ======== -->
+        <div id="messages-modal" class="modal hidden">
             <div class="close">
                 <div>&times;</div>
             </div>
-            {{ #each posts}}
-            <div>{{> post myTitle="My Title"}}</div>
-            {{ /each }}
+            <form class="modal-form signup">
+                <input type="email" placeholder="johnsmith@gmail.com" class="info-field" class="signup-email-field" id="email-input" >
+                <input type="password" placeholder="password" class="info-field" class="signup-password-field" id="password-input">
+            </form>
+            <button type="submit" id="modal-signup-button" class="add-message-button">Add a Message</button>  
         </div>
-=======
-
->>>>>>> master
+         <!-- ========= ADD A MESSAGE ======== -->
+         <div id="add-messages-modal" class="modal hidden">
+            <div class="close">
+                <div>&times;</div>
+            </div>
+            <form class="modal-form signup">
+                <input type="email" placeholder="johnsmith@gmail.com" class="info-field" class="signup-email-field" id="email-input" >
+                <input type="password" placeholder="password" class="info-field" class="signup-password-field" id="password-input">
+            </form>
+            <button type="submit" id="modal-signup-button" class="add-messages-button">Post</button>  
+        </div>
+        <!-- ========= LOGIN ======== -->
+        <div id="login-modal" class="modal hidden">
+            <div class="close">
+                <div>&times;</div>
+            </div>
+            <form class="modal-form signup">
+                <input type="email" placeholder="johnsmith@gmail.com" class="info-field" class="signup-email-field" id="email-input" >
+                <input type="password" placeholder="password" class="info-field" class="signup-password-field" id="password-input">
+            </form>
+            <button type="submit" id="modal-signup-button" class="signup-button">Log in</button>  
+        </div>
+        <!-- ========= SIGNUP ======== -->
+        <div id="signup-modal" class="modal hidden">
+            <div class="close">
+                <div>&times;</div>
+            </div>
+            <form class="modal-form signup">
+                <input type="email" placeholder="johnsmith@gmail.com" class="info-field" class="signup-email-field" id="email-input" >
+                <input type="password" placeholder="password" class="info-field" class="signup-password-field" id="password-input">
+            </form>
+            <button type="submit" id="modal-signup-button" class="signup-button">Sign Up</button>  
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js"></script>
