@@ -1,9 +1,34 @@
-<!--
-<h1>Recycling Facts!</h1>
-  -->
-  {{#each facts}}
-  	<h4>
-  	   <!--<p>ID: {{this.id}}</p>-->
-       <center><p>Recycling Fact: {{this.fact}}</p></center>
-  	</h4>
-  {{/each}}
+<div class="page">
+  <div class="photo"></div>
+  <div class="blue-background"></div>
+  <div class="nav-buttons">
+      <button class="tweets">Tweets</button>
+      <button class="messages">Message Board</button>
+      <button class="login">Log In</button>
+      <button class="signup" id="signup-button">Sign Up</button>
+  </div>
+  <p class="recycle">Recycle</p>
+  <div class="nation"><p>Nation</p></div>
+  <div class="slogan">
+      <div class="line1"><p>Best recycling practices</p></div>
+      <div class="line2"><p>to avoid pollution</p></div>
+  </div>
+  <form class="search">
+      <input id="submit" type="submit" value="">
+      <!-- <i><img src="search32.png" alt="search icon"></i> -->
+      <input type="text" placeholder="batteries" id="input-field">
+  </form>  
+  <div class="fact">The EPA estimates that 75% of the American waste stream is recyclable, but we only recycle about 30% of it.</div>
+  <div id="modal-container" class="modal hidden">
+      <div class="close">
+          <div>&times;</div>
+      </div>
+      <form class="modal-form signup">
+          <!-- <input type="text" placeholder="John" id="info-field">
+          <input type="text" placeholder="Smith" id="info-field"> -->
+          <input type="email" placeholder="johnsmith@gmail.com" class="info-field" class="signup-email-field" id="email-input" >
+          <input type="password" placeholder="password" class="info-field" class="signup-password-field" id="password-input">
+          <!-- <input type="text" placeholder="11237" class="info-field" id="signup-zip-field"> -->
+      </form>
+      <button type="submit" id="modal-signup-button" class="signup-button">Sign Up</button>  
+  </div>

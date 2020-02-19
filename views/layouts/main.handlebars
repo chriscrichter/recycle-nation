@@ -1,59 +1,14 @@
-
-		
-
-		{{!-- <div class="fact"><center>{</center></div> --}}
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recycle Nation</title>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+
 </head>
 <body>
-    <div class="page">
-        <div class="photo"></div>
-        <div class="blue-background"></div>
-        <div class="nav-buttons">
-            <button class="tweets">Tweets</button>
-            <button class="messages">Message Board</button>
-            <button class="login">Log In</button>
-            <button class="signup" id="signup-button">Sign Up</button>
-        </div>
-        <p class="recycle">Recycle</p>
-        <div class="nation"><p>Nation</p></div>
-        <div class="slogan">
-            <div class="line1"><p>Best recycling practices</p></div>
-            <div class="line2"><p>to avoid pollution</p></div>
-        </div>
-        <form class="search">
-            <input id="submit" type="submit" value="">
-            <!-- <i><img src="search32.png" alt="search icon"></i> -->
-            <input type="text" placeholder="batteries" id="input-field">
-        </form>  
-        <div class="fact">{{{ body }}}</div>
-        <div id="modal-container" class="modal hidden">
-            <div class="close">
-                <div>&times;</div>
-            </div>
-            <form class="modal-form signup">
-                <!-- <input type="text" placeholder="John" id="info-field">
-                <input type="text" placeholder="Smith" id="info-field"> -->
-                <input type="email" placeholder="johnsmith@gmail.com" class="info-field" class="signup-email-field" id="email-input" >
-                <input type="password" placeholder="password" class="info-field" class="signup-password-field" id="password-input">
-                <!-- <input type="text" placeholder="11237" class="info-field" id="signup-zip-field"> -->
-            </form>
-            <button type="submit" id="modal-signup-button" class="signup-button">Sign Up</button>  
-        </div>
-        <div id="modal-messages" class="modal hidden">
-            <div class="close">
-                <div>&times;</div>
-            </div>
-            
-        </div>
+    {{{ body }}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/signup.js"></script>
