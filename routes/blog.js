@@ -10,12 +10,18 @@ router.get("/api/posts/", function(req, res) {
   
   db.Post.findAll({})
     .then(function(dbPost) {
-      res.render("index", { post: dbPost} );
+      let posts = [
+        {
+          title: 'a post'
+        },
+        {
+          title: 'another post'
+        }
+      ]
+      res.render("blogs", { posts: posts} );
+     // res.render("index", { post: dbPost} );
     });
 });
-<<<<<<< HEAD
-// , passport.authenticate("local")
-=======
 
 // Create all our routes and set up logic within those routes where required.
 // router.get("/", function(req, res) {
@@ -32,7 +38,6 @@ router.get("/api/posts/", function(req, res) {
 
 // passport.authenticate("local")
 
->>>>>>> master
 router.post("/api/posts", function(req, res) {
   console.log(req.body);
   db.Post.create(req.body)

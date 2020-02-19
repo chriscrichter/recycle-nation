@@ -9,9 +9,7 @@ var db = require("./models");
 var routes = require('./routes');
 var twitter = require("./services/twitter");
 const utils = require('./services/utils');
-const mysql = require("mysql");
 const path = require('path');
-
 
 var PORT = process.env.PORT || 8080;
 const supportedEnivornments = ['new york', 'chicago', 'los angeles', 'miami', 'seattle', 'boston', 'portland'];
@@ -43,49 +41,13 @@ app.use(passport.session());
 app.use(routes.twitter);
 app.use(routes.user);
 app.use(routes.facts);
-//app.use(routes.html);
+app.use(routes.html);
 app.use(routes.blog);
 app.use(routes.api);
 
-require("./routes/api-routes.js")(app);
 
 
-
-var connection = mysql.createConnection({
-  host: "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  port: 3306,
-  user: "bm8ozsqt8ehomlw5",
-  password: "xr1wsmn48fb916jq",
-  database: "gajb8m09t9ub53b5"
-});
-
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-
-  console.log("connected as id " + connection.threadId);
-});
-
-// Root get route.
-app.get("/", function(req, res) {
-  connection.query("SELECT fact FROM facts ORDER BY RAND() limit 1;", function(err, data) {
-    if (err) {
-      throw err;
-    }
-
-    res.render("index", { facts: data });
-  });
-});
-
-
-
-
-
-
-
-
+   
 io.on('connection', function(socket){
   console.log('a user connected witht he socket id', socket.id);
   // add connection to a random room for this user
@@ -111,18 +73,17 @@ io.on('connection', function(socket){
 //   });
 // }, 5000);
 
+// const supportedEnivornmentsObject = utils.objOfArraysForEachArrayItem(supportedEnivornments);
 
-const supportedEnivornmentsObject = utils.objOfArraysForEachArrayItem(supportedEnivornments);
+// const streams = twitter.createStreams(supportedEnivornmentsObject);
+
+// supportedEnivornments.forEach(supportedEnv => {
+//   streams.on('channels/'+supportedEnv, tweet => {
+//     io.to(supportedEnv).emit('new tweet', tweet);
+//   });
+// })
 
 
-const streams = twitter.createStreams(supportedEnivornmentsObject);
-
-
-supportedEnivornments.forEach(supportedEnv => {
-  streams.on('channels/'+supportedEnv, tweet => {
-    io.to(supportedEnv).emit('new tweet', tweet);
-  });
-})
 
 db.sequelize.sync()
 .then(function() {
