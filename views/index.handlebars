@@ -1,9 +1,429 @@
-<!--
-<h1>Recycling Facts!</h1>
-  -->
-  {{#each facts}}
-  	<h4>
-  	   <!--<p>ID: {{this.id}}</p>-->
-       <center><p>Recycling Fact: {{this.fact}}</p></center>
-  	</h4>
-  {{/each}}
+    <div class="page">
+        <div class="photo"></div>
+        <div class="blue-background"></div>
+        <div class="nav-buttons">
+            <button class="tweets">Tweets</button>
+            <button class="messages">Message Board</button>
+            <button class="login">Log In</button>
+            <button class="signup" id="signup-button">Sign Up</button>
+        </div>
+        <p class="recycle">Recycle</p>
+        <div class="nation"><p>Nation</p></div>
+        <div class="slogan">
+            <div class="line1"><p>Best recycling practices</p></div>
+            <div class="line2"><p>to avoid pollution</p></div>
+        </div>
+        <!-- 
+        <form class="search">
+            <input id="submit" type="submit" value="">  -->
+            <!-- <i><img src="search32.png" alt="search icon"></i> -->
+           <!-- <input type="text" placeholder="batteries" id="input-field">
+        </form>
+         -->
+
+
+
+        <div class="search">
+            <form class="search-field">
+               <!-- <input id="submit" type="submit" value="">
+                 <i><img src="search32.png" alt="search icon"></i> 
+                <input type="text" placeholder="batteries" id="input-field"> -->
+                 <div class="card-header">
+            <h3>What do you want to recycle?</h3>
+          <div class="card-body">
+            </div>
+       
+            <select class="selectpicker" id="material-search" data-live-search="true" width="400">
+              <option>Choose material</option>
+              <option>Acids</option>
+              <option>Adhesives</option>
+              <option>Adult Toys</option>
+              <option>Aerosol Cans</option>
+              <option>Air Conditioners</option>
+              <option>Alkaline Batteries</option>
+              <option>Aluminum</option>
+              <option>Aluminum Beverage Cans</option>
+              <option>Aluminum Foil</option>
+              <option>Aluminum Food Cans</option>
+              <option>Aluminum Lids</option>
+              <option>Aluminum Pie Plates</option>
+              <option>Aluminum Scrap</option>
+              <option>Aluminum Trays</option>
+              <option>Ammunition</option>
+              <option>Antifreeze</option>
+              <option>Arts and Crafts Supplies</option>
+              <option>Asbestos</option>
+              <option>Asphalt</option>
+              <option>Audio Equipment</option>
+              <option>Auto Bodies</option>
+              <option>Auto Parts</option>
+              <option>Baby Products</option>
+              <option>Barbeque Grills</option>
+              <option>Bicycles</option>
+              <option>Bike Tires</option>
+              <option>Blu-Ray Players</option>
+              <option>Blue Glass Beverage Containers</option>
+              <option>Blue Glass Containers</option>
+              <option>Blueprints</option>
+              <option>Booklets</option>
+              <option>Boomboxes</option>
+              <option>Box</option>
+              <option>Brake Fluid</option>
+              <option>Branches</option>
+              <option>Brass</option>
+              <option>Brick</option>
+              <option>Brochures</option>
+              <option>Brown Glass Beverage Containers</option>
+              <option>Brown Glass Containers</option>
+              <option>Brush</option>
+              <option>Button Cell Batteries</option>
+              <option>Cables</option>
+              <option>Calculators</option>
+              <option>Candy Wrappers</option>
+              <option>Car Batteries</option>
+              <option>Car Fluids</option>
+              <option>Cardboard</option>
+              <option>Cardstock</option>
+              <option>Carpet</option>
+              <option>Carpet Padding</option>
+              <option>Cassette Players</option>
+              <option>Cassette Tapes</option>
+              <option>Catalogs</option>
+              <option>CD Cases</option>
+              <option>CD Players</option>
+              <option>CDs</option>
+              <option>Ceiling Tiles</option>
+              <option>Cell Phone Accessories</option>
+              <option>Cell Phones</option>
+              <option>Ceramic Tile</option>
+              <option>CFLs</option>
+              <option>Chemistry Sets</option>
+              <option>Chip Bags</option>
+              <option>Chipboard</option>
+              <option>Christmas Trees</option>
+              <option>Cigarettes</option>
+              <option>Clear Glass Beverage Containers</option>
+              <option>Clear Glass Containers</option>
+              <option>Clothing</option>
+              <option>Compostable Plastics</option>
+              <option>Computer</option>
+              <option>Computer Peripherals</option>
+              <option>Concrete</option>
+              <option>Construction Debris</option>
+              <option>Construction Materials</option>
+              <option>Construction Paper</option>
+              <option>Contaminated Soil</option>
+              <option>Contaminated Wood</option>
+              <option>Controlled Substances</option>
+              <option>Cooking Oil</option>
+              <option>Cookware</option>
+              <option>Copper</option>
+              <option>Corks</option>
+              <option>Corrugated Cardboard</option>
+              <option>Crayons</option>
+              <option>CRT Computer Monitors</option>
+              <option>CRT Televisions</option>
+              <option>Curling Irons</option>
+              <option>Dehumidifiers</option>
+              <option>Desktop Computers</option>
+              <option>Digital Cameras</option>
+              <option>Dirt</option>
+              <option>Dishwashers</option>
+              <option>Doors</option>
+              <option>Drink Boxes</option>
+              <option>Drink Pouches</option>
+              <option>Dryers</option>
+              <option>DVD Players</option>
+              <option>DVDs</option>
+              <option>E-Waste</option>
+              <option>Electronic Servers</option>
+              <option>Electronic Waste</option>
+              <option>Engine Degreasers</option>
+              <option>Envelopes</option>
+              <option>Exit Signs</option>
+              <option>Explosives</option>
+              <option>Eyeglasses</option>
+              <option>Fabric</option>
+              <option>Ferrous Metals</option>
+              <option>Fertilizers</option>
+              <option>Fire Extinguishers</option>
+              <option>Flexible Plastics</option>
+              <option>Flip-Flops</option>
+              <option>Floppy Disks</option>
+              <option>Fluorescent Tubes</option>
+              <option>Freezers</option>
+              <option>Fungicides</option>
+              <option>Game Consoles</option>
+              <option>Garden Tools</option>
+              <option>Gas Cylinders</option>
+              <option>Gas/Oil Mixture</option>
+              <option>Gasoline</option>
+              <option>Gift Bags</option>
+              <option>Gift Boxes</option>
+              <option>Glassine</option>
+              <option>Glue Sticks</option>
+              <option>GPS Systems</option>
+              <option>Glass</option>
+              <option>Grass Clippings</option>
+              <option>Green Glass Beverage Containers</option>
+              <option>Green Glass Containers</option>
+              <option>Greeting Cards</option>
+              <option>Gypsum Drywall</option>
+              <option>Hair</option>
+              <option>Hair Dye</option>
+              <option>Hair Spray</option>
+              <option>Halogen Bulbs</option>
+              <option>Hard Drives</option>
+              <option>Hardcover Books</option>
+              <option>Hardware</option>
+              <option>Hay</option>
+              <option>Heaters</option>
+              <option>Herbicides</option>
+              <option>HHW</option>
+              <option>Holiday Greens</option>
+              <option>Home Electronics</option>
+              <option>Household Cleaners</option>
+              <option>Household Furniture</option>
+              <option>Hoverboards</option>
+              <option>Humidifiers</option>
+              <option>Hydraulic Fluid</option>
+              <option>Incandescent Lightbulbs</option>
+              <option>Inkjet Cartridges</option>
+              <option>Innertubes</option>
+              <option>Insecticides</option>
+              <option>Items Containing Mercury</option>
+              <option>Kerosene</option>
+              <option>Kraft Paper</option>
+              <option>Lacquer</option>
+              <option>Laptop Computers</option>
+              <option>Latex Foam Pillows</option>
+              <option>Latex Paint</option>
+              <option>Lawnmowers</option>
+              <option>LCD Computer Monitors</option>
+              <option>LCD Televisions</option>
+              <option>Lead Paint Chips</option>
+              <option>Lead-acid Batteries</option>
+              <option>Leaves</option>
+              <option>Lice Shampoo</option>
+              <option>Light Fixtures</option>
+              <option>Lighter Fluid</option>
+              <option>Lighting Ballasts</option>
+              <option>Linens</option>
+              <option>Linoleum</option>
+              <option>Lithium Batteries</option>
+              <option>Lithium-ion Batteries</option>
+              <option>Lumber</option>
+              <option>Magazines</option>
+              <option>Mail</option>
+              <option>Manila Folders</option>
+              <option>Mannequins</option>
+              <option>Manure</option>
+              <option>Marine Batteries</option>
+              <option>Mattresses</option>
+              <option>Medical Equipmentd</option>
+              <option>Medical Sharps</option>
+              <option>Medication Containers</option>
+              <option>Medications</option>
+              <option>Mercury Thermostats</option>
+              <option>Metal Clothes Hangers</option>
+              <option>Metal Paint Cans</option>
+              <option>Metal Tags</option>
+              <option>Microwaves</option>
+              <option>Milk and Juice Cartons</option>
+              <option>Mixed Paper</option>
+              <option>Motor Oil</option>
+              <option>Motor Oil Containers</option>
+              <option>MP3 Players</option>
+              <option>Multi-wall Paper Bags</option>
+              <option>Musical Instruments - Metal</option>
+              <option>Musical Instruments - Non-metal</option>
+              <option>Nail Polish</option>
+              <option>Nail Polish Removers</option>
+              <option>Neon Lights</option>
+              <option>Newspaper</option>
+              <option>Newspaper Inserts</option>
+              <option>Nickel-cadmium Batteries</option>
+              <option>Nickel-metal Hydride Batteries</option>
+              <option>Nickel-zinc Batteries</option>
+              <option>Non-Organic Food Waste</option>
+              <option>Nonferrous Metals</option>
+              <option>Nylon Flag</option>
+              <option>Office Furniture</option>
+              <option>Office Machines</option>
+              <option>Office Paper</option>
+              <option>Office Supplies</option>
+              <option>Oil Filters</option>
+              <option>Oil-Based Paint</option>
+              <option>Organic Food Waste</option>
+              <option>Ornaments</option>
+              <option>Pagers</option>
+              <option>Paint Strippers</option>
+              <option>Paint Thinners</option>
+              <option>Pallets</option>
+              <option>Paper</option>
+              <option>Paper Bags</option>
+              <option>Paper Cups</option>
+              <option>Paper Egg Cartons</option>
+              <option>Paper Labels</option>
+              <option>Paper Shredders</option>
+              <option>Paper Sleeves</option>
+              <option>Paper Tubes</option>
+              <option>Paperback Books</option>
+              <option>Paperboard</option>
+              <option>Perfumes</option>
+              <option>Pesticide Containers</option>
+              <option>Pesticides</option>
+              <option>Phone Books</option>
+              <option>Photographic Chemicals</option>
+              <option>Pipe</option>
+              <option>Pizza Boxes</option>
+              <option>Plastic</option>
+              <option>Plastic Bags</option>
+              <option>Plastic Beverage Bottles</option>
+              <option>Plastic Bottle Accessories</option>
+              <option>Plastic Bottles</option>
+              <option>Plastic Buckets</option>
+              <option>Plastic Caps</option>
+              <option>Plastic Cards</option>
+              <option>Plastic Clamshells</option>
+              <option>Plastic Cups</option>
+              <option>Plastic Egg Cartons</option>
+              <option>Plastic Film</option>
+              <option>Plastic Furniture</option>
+              <option>Plastic Jugs</option>
+              <option>Plastic Non-Beverage Bottles</option>
+              <option>Plastic Packing Materials</option>
+              <option>Plastic Paint Cans</option>
+              <option>Plastic Peanuts</option>
+              <option>Plastic Plant Materials</option>
+              <option>Plastic Playsets</option>
+              <option>Plastic Trays</option>
+              <option>Pool Chemicals</option>
+              <option>Porcelain Products</option>
+              <option>Power Steering Fluid</option>
+              <option>Power Tools</option>
+              <option>Printers</option>
+              <option>Projectors</option>
+              <option>Propane Tanks</option>
+              <option>Radiators</option>
+              <option>Receivers</option>
+              <option>Record Players</option>
+              <option>Refrigerators</option>
+              <option>Rigid Plastics</option>
+              <option>Road Flares</option>
+              <option>Roofing Materials</option>
+              <option>Sand</option>
+              <option>Satellite Dish</option>
+              <option>Sawdust</option>
+              <option>Scanners</option>
+              <option>Scrap Metal</option>
+              <option>Sealers</option>
+              <option>Shingles</option>
+              <option>Shoes</option>
+              <option>Shredded Paper</option>
+              <option>Silver-oxide Batteries</option>
+              <option>Six-pack Rings</option>
+              <option>Small Appliances</option>
+              <option>Smoke Detectors</option>
+              <option>Soiled Paper</option>
+              <option>Solvents</option>
+              <option>Sporting Goods</option>
+              <option>Stainless Steel</option>
+              <option>Steel Cans</option>
+              <option>Steel Lids</option>
+              <option>Stone</option>
+              <option>Stoves</option>
+              <option>String Lights</option>
+              <option>Stumps</option>
+              <option>Surfboards</option>
+              <option>Synthetic Cork</option>
+              <option>Tablets</option>
+              <option>Telephones</option>
+              <option>Television Accessories</option>
+              <option>Tennis Balls</option>
+              <option>Tile</option>
+              <option>Tires</option>
+              <option>Toasters</option>
+              <option>Toner Cartridges</option>
+              <option>Tools</option>
+              <option>Toothbrushes</option>
+              <option>Toothpaste Tubes</option>
+              <option>Toys</option>
+              <option>Transmission Fluid</option>
+              <option>Treated Glass Containers</option>
+              <option>Trophies</option>
+              <option>Truck Tires</option>
+              <option>Two-Way Radios</option>
+              <option>Typewriters</option>
+              <option>Tyvek Envelopes</option>
+              <option>Vacuum Cleaners</option>
+              <option>Varnish</option>
+              <option>VCRs</option>
+              <option>Vehicles</option>
+              <option>Video Game Cartridges</option>
+              <option>Video Game Peripherals</option>
+              <option>Video Tapes</option>
+              <option>Vinyl Records</option>
+              <option>Washer</option>
+              <option>Water Filters</option>
+              <option>Waxed Cardboard</option>
+              <option>Weeds</option>
+              <option>Wet-strength Paperboard</option>
+              <option>Window Envelopes</option>
+              <option>Windows</option>
+              <option>Wood</option>
+              <option>Wood Chips</option>
+              <option>Wood Furnishings</option>
+              <option>Wood Stains</option>
+              <option>Wrapping Paper</option>
+              <option>X-rays</option>
+              <option>Yard Waste</option>
+              <option>Yoga Mats</option>
+              <option>Zinc</option>
+              <option>Zinc-air Batteries</option>
+              <option>Zinc-carbon Batteries</option>           
+          </select>
+
+            <div class="text-center">
+              <button class="btn btn-primary btn-md" id="search-btn">
+                <span class="fa fa-search"></span> Search</button>
+          </div>
+       </div>
+
+
+            </form>
+			 
+
+    
+
+        </div>
+
+       
+    </div> 
+    <div id="messages-container" class="modal visible">SHOW ME GOD DAMNIT
+      <p>hello world</p>
+      <p>alex is heres</p>
+      <div class="close">
+        <div>&times;</div>
+      </div>
+      {{!-- <ul>
+        {{#each post}}
+                {{> posts/post-block}}
+        {{/each}}  
+      </ul> --}}
+      <button type="submit" id="modal-signup-button" class="signup-button">Sign Up</button>  
+    </div>
+    <div id="modal-container" class="modal hidden">
+      <div class="close">
+          <div>&times;</div>
+      </div>
+      <form class="modal-form signup">
+          <!-- <input type="text" placeholder="John" id="info-field">
+          <input type="text" placeholder="Smith" id="info-field"> -->
+          <input type="email" placeholder="johnsmith@gmail.com" class="info-field" class="signup-email-field" id="email-input" >
+          <input type="password" placeholder="password" class="info-field" class="signup-password-field" id="password-input">
+          <!-- <input type="text" placeholder="11237" class="info-field" id="signup-zip-field"> -->
+      </form>
+      <button type="submit" id="modal-signup-button" class="signup-button">Sign Up</button>  
+    </div>
+</div>
