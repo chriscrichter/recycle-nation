@@ -82,9 +82,9 @@ button {
 
 .search {
     width: 40%;
-    margin: 15% auto 0% auto;
+    margin: 0 auto;
     grid-column: 5 / -1;
-    grid-row: 4 / 5;
+    grid-row: 5 / 6;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 85% 15%;
@@ -178,7 +178,7 @@ button {
 /* main grid */
 .slogan {
     grid-column: 5 / -1;
-    grid-row: 3 / 5;
+    grid-row: 3 / 4;
 }
 
 /* internal grid */
@@ -236,9 +236,9 @@ button {
 
 /* ============ MODAL ================== */
 
-.modal {
-    max-width: 100%;
-    max-height: 100%;
+.information {
+    max-width: 60%;
+    max-height: 60%;
     grid-row: 2 / 10;
     grid-column: 4 / 8;
     z-index: 10;
@@ -252,6 +252,7 @@ button {
     align-self: center;
     justify-self: center;
     padding: 1% 5%;
+    position: relative;
 }
 
 .info-field {
@@ -279,7 +280,7 @@ button {
     outline: none;
 }
 
-.close {
+.closing-x {
     color: white;
     font-size: 25px;
     display: flex;
@@ -289,7 +290,7 @@ button {
     margin: 5%;
 }
 
-.close:active {
+.closing-x:active {
     transform: translateY(1px); 
 }
 
@@ -316,19 +317,14 @@ button {
 
 /* ============ VISIBILITY ================== */
 
-.visible {
+.seen {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.8s linear;
 }                
-.hidden {
+.invisible {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 0.3s, opacity 0.3s linear;
 }
-
-/* =========== MESSAGES MODAL =========== */
-
-
-
 }
