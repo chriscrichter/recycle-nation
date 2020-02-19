@@ -4,6 +4,8 @@ var router = express.Router();
 var passport = require("../config/passport"); 
 
 
+
+
 router.get("/api/posts/", function(req, res) {
   
   db.Post.findAll({})
@@ -15,7 +17,7 @@ router.get("/api/posts/", function(req, res) {
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
   console.log("db", db);
-  db.Posts.all(function(data) {
+  db.Post.all(function(data) {
     var hbsObject = {
       posts: data
     };
