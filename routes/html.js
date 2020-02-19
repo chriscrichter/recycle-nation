@@ -1,3 +1,27 @@
+
+var express = require('express');
+var db = require("../models");
+var router = express.Router();
+var passport = require("../config/passport"); 
+
+
+
+
+router.get("/", function(req, res) {
+ // res.json(db.fact);  
+  db.Fact.findAll({})
+    .then((facts)=>{
+
+      //res.render("facts",facts); 
+    })
+
+});
+
+module.exports = router; 
+
+
+
+
 // // Requiring path to so we can use relative routes to our HTML files
 // var path = require("path");
 // var express = require('express');
