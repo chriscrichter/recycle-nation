@@ -7,17 +7,15 @@ var passport = require("../config/passport");
 
 
 router.get("/api/posts/", function(req, res) {
-  db.Post.findAll({})
+  db.Post.findAll({raw:true})
     .then(function(dbPost) {
-      let posts = [
-        {
-          title: 'a post'
-        },
-        {
-          title: 'another post'
-        }
-      ]
-      res.render("blogs", { posts: posts} );
+      console.log(dbPost); 
+     // console.log(dbPost); 
+      var hbsObject = {
+        posts: dbPost
+      }
+      // console.log(hbsObject); 
+      res.render("index", hbsObject);
      // res.render("index", { post: dbPost} );
     });
 });

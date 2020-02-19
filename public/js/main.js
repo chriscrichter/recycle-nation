@@ -53,12 +53,30 @@ changeModal();
 })
 
 // SIGNUP BUTTON
-$("#signup-button").click(() => {
+$("#signup-button").click((event) => {
 $("#signup-modal").removeClass("hidden");
 $("#signup-modal").addClass("visible");
 $("#signup-modal").css("clip-path", "circle(75%)");
 changeModal();
+
 })
+
+// $("#modal-signup-button").click(() =>{
+//   event.preventDefault();
+//   let newUser = {
+//     name: $("#email-input").val(),
+//     password: $("#password-input").val()
+//   }
+//   console.log(newUser)
+  
+//   $.ajax("api/signup",{
+//     type: "POST",
+//     data: newUser 
+//   }).then(() => {
+//     console.log("created new user")
+//     // location.reload();
+//   })
+// })
 
 // SIGNUP BUTTON
 $(".login").click(() => {
