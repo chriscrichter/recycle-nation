@@ -5,8 +5,9 @@ var db = require("../models");
 
 
 router.get("/api/material/", function(req, res) {
-  console.log(db.Book); 
-  db.Book.findAll({raw:true})
+  console.log(db.Post); 
+  console.log(db.Material); 
+  db.Material.findAll({raw:true})
     .then(function(dbPost) {
       console.log('material search hit');       
       console.log(dbPost); 
