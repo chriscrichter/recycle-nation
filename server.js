@@ -13,7 +13,7 @@ const mysql = require("mysql");
 const path = require('path');
 
 var PORT = process.env.PORT || 8080;
-const supportedEnivornments = ['environment', 'recycling', 'turtles', 'Thunberg', 'waste', 'reuse', 'landfill', 'live green', 'greta', 'global warming', 'polar bears', 'corona virus'];
+const supportedEnivornments = ['environment', 'recycling', 'turtles', 'waste', 'greta', 'reuse', 'coronavirus', 'global warming', 'polar bears', 'live green', 'landfill', 'Thunberg'];
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

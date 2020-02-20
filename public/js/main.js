@@ -52,10 +52,7 @@ $(".nation").css("margin-right", "40%");
 $(".fact").css("margin-right", "13%");
 })
 
-var viewportSize = window.matchMedia("(min-width: 678px)")
-// myFunction(viewportSize) // Call listener function at run time
-// viewportSize.addListener(myFunction) // Attach listener function on state changes
-
+var viewportSize = window.matchMedia("(min-width: 678px)");
 const resultsModal = $("#results-modal")
 const tweetsModal = $("#tweets-modal")
 const messagesModal = $("#messages-modal")
@@ -79,10 +76,10 @@ const changeModalMobile = () => {
   $(".slogan").addClass("invisible");
   $(".photo").css("clip-path", "inset(0% 100% 0% 0%)");
   $(".blue-background").css("margin-right", "20%");
-  $(".recycle").css("margin-right", "40%");
-  $(".nation").css("margin-right", "40%");
-  $(".fact").css("margin-right", "13%");
-  $(".nav-buttons").css("margin-right", "13%");
+  $(".recycle").css("margin-right", "20%");
+  $(".nation").css("margin-right", "20%");
+  $(".fact").css("margin-right", "5%");
+  $(".nav-buttons").css("margin-right", "5%");
 }
 
 // SIGNUP BUTTON
@@ -90,7 +87,6 @@ $("#signup-button").click(() => {
   $("#signup-modal").removeClass("invisible");
   $("#signup-modal").addClass("seen");
   $(".information").css("clip-path", "circle(75%)");
-  changeModal();
   if (viewportSize.matches) {
     changeModalDesktop();
   } else {
@@ -108,6 +104,11 @@ $("#signup-button").click(() => {
   $("#login-modal").removeClass("invisible");
   $("#login-modal").addClass("seen");
   $("#login-modal").css("clip-path", "circle(75%)");
+  if (viewportSize.matches) {
+    changeModalDesktop();
+  } else {
+    changeModalMobile();
+  }
   resultsModal.addClass("invisible");
   tweetsModal.addClass("invisible");
   messagesModal.addClass("invisible");
