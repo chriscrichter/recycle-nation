@@ -12,7 +12,7 @@ const utils = require('./services/utils');
 const path = require('path');
 
 var PORT = process.env.PORT || 8080;
-const supportedEnivornments = ['new york', 'chicago', 'los angeles', 'miami', 'seattle', 'boston', 'portland'];
+const supportedEnivornments = ['environment', 'recycling', 'turtles', 'Thunberg', 'waste', 'reuse', 'landfill', 'live green', 'greta', 'global warming', 'polar bears', 'corona virus'];
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -75,15 +75,15 @@ io.on('connection', function(socket){
 //   });
 // }, 5000);
 
-// const supportedEnivornmentsObject = utils.objOfArraysForEachArrayItem(supportedEnivornments);
+const supportedEnivornmentsObject = utils.objOfArraysForEachArrayItem(supportedEnivornments);
 
-// const streams = twitter.createStreams(supportedEnivornmentsObject);
+const streams = twitter.createStreams(supportedEnivornmentsObject);
 
-// supportedEnivornments.forEach(supportedEnv => {
-//   streams.on('channels/'+supportedEnv, tweet => {
-//     io.to(supportedEnv).emit('new tweet', tweet);
-//   });
-// })
+supportedEnivornments.forEach(supportedEnv => {
+  streams.on('channels/'+supportedEnv, tweet => {
+    io.to(supportedEnv).emit('new tweet', tweet);
+  });
+})
 
 
 
