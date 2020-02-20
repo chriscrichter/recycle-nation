@@ -6,9 +6,9 @@ const Op = Sequelize.Op;
 
 router.get("/api/:material/", function(req, res) {
   console.log(db.Post); 
-  console.log(db.Material); 
+  console.log(db.material); 
   console.log(req.params);
-  db.Material.findAll({   
+  db.material.findAll({   
     where: {
     description: {
       

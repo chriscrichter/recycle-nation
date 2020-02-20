@@ -43,9 +43,18 @@
     </div>
     <div class="fact">
       {{#each facts}}
+        <h4>
+          <center><p>Recycling Fact: {{this.fact}}</p></center>
+        </h4>
+      {{/each}}
+    </div>
+    <!--
+    <div class="fact">
+      {{#each facts}}
         {{> facts/fact-block}}
       {{/each}}
     </div>
+    -->
     <!-- ========= RESULTS ======== -->
     {{!-- <div id="results-modal" class="modal invisible">
         <div class="closing-x">
