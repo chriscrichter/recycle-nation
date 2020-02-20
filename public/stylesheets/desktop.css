@@ -49,6 +49,7 @@
     .nav-buttons {
         display: grid;
         grid-auto-flow: column;
+        margin-right: 10%;
     }
     
     button {
@@ -70,6 +71,11 @@
     
     .tweets {
         justify-self: start;
+        margin-left: 10%;
+    }
+
+    .tweets a {
+        color: black;
     }
     
     .messages {
