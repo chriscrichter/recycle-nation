@@ -5,15 +5,12 @@ var Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
 router.get("/api/:material/", function(req, res) {
-  // console.log(db.Post); 
-  // console.log(db.Material); 
-  // console.log(req.params);
-  db.Material.findAll({ attributes: [ 'long_description'], raw: true ,    
-    //attributes: ['long_description'],
-    where: 
-      { description: {
-         [Op.like]: "%" + req.params.material + "%"} 
-        } 
+  console.log(db.Post); 
+  console.log(db.material); 
+  console.log(req.params);
+  db.material.findAll({   
+    where: {
+    description: {
       
     })
     .then(function(dbMaterial) {

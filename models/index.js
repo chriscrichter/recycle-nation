@@ -11,7 +11,7 @@ if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, { 
-    host: '127.0.0.1', 
+    host: 's3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', 
     dialect: 'mysql',
     username: 'root',
     password: 'Theoffice92', 
@@ -24,10 +24,10 @@ fs
   .filter(function(file) {
     return (file.indexOf(".") !== 0) && (file !== basename) && (file.slice(-3) === ".js");
   })
-  .forEach(function(file) {
-    var model = sequelize["import"](path.join(__dirname, file));
-    db[model.name] = model;
-  });
+  //.forEach(function(file) {
+    //var model = sequelize["import"](path.join(__dirname, file));
+    //db[model.name] = model;
+  //});
 
 Object.keys(db).forEach(function(modelName) {
   if (db[modelName].associate) {

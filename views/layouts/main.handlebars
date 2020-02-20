@@ -12,13 +12,164 @@
 </head>
 <body>
     {{{ body }}}
-
-        <div class="well" id="stats">
-            <h5 id="material"></h5>
-            <h6 id="description"></h6>
+<div class="page">
+  <div class="photo"></div>
+  <div class="blue-background"></div>
+  <div class="nav-buttons">
+      <button class="tweets"><a href="/twitter">Tweets</a></button>
+      <button class="login">Log In</button>
+      <button class="signup" id="signup-button">Sign Up</button>
+  </div>
+    <p class="recycle">Recycle</p>
+    <div class="nation"><p>Nation</p></div>
+    <div class="slogan">
+      <div class="line1"><p>Best recycling practices</p></div>
+      <div class="line2"><p>to avoid pollution</p></div>
+    </div>
+    <div class="search">
+        <form class="search-field">
+          <div class="card-header">
+            <h3>What do you want to recycle?</h3>
+            <select class="selectpicker" id="material-search" data-live-search="true" width="400">
+              <option>Acids</option>
+              <option>Adhesives</option>
+              <option>Adult Toys</option>
+              <option>Aerosol Cans</option>
+              <option>Air Conditioners</option>
+              <option>Aluminum</option>
+              <option>Ammunition</option>
+              <option>Antifreeze</option>
+              <option>Appliances</option>
+              <option>Asbestos</option>
+              <option>Auto Parts</option>
+              <option>Bicycles</option>
+              <option>Box</option>
+              <option>Brass</option>
+              <option>Brick</option>
+              <option>Cables</option>
+              <option>Calculators</option>
+              <option>Camera</option>
+              <option>Car Fluids</option>
+              <option>Cardboard</option>
+              <option>Carpet</option>
+              <option>Cassette</option>
+              <option>CD</option>
+              <option>Chemicals</option>
+              <option>Choose material</option>
+              <option>Christmas Trees</option>
+              <option>Clothing</option>
+              <option>Computer</option>
+              <option>Cookware</option>
+              <option>Copper</option>
+              <option>Dirt</option>
+              <option>Dishwashers</option>
+              <option>Doors</option>
+              <option>Dryer</option>
+              <option>DVD </option>
+              <option>Explosives</option>
+              <option>Eyeglasses</option>
+              <option>Flip-Flops</option>
+              <option>Floppy Disks</option>
+              <option>Fluorescent</option>
+              <option>Freezer</option>
+              <option>Gas</option>
+              <option>Glass</option>
+              <option>Hair</option>
+              <option>Lawnmowers</option>
+              <option>Leaves</option>
+              <option>Linens</option>
+              <option>Linoleum</option>
+              <option>Lumber</option>
+              <option>Magazines</option>
+              <option>Mattress</option>
+              <option>Medical </option>
+              <option>Metal</option>
+              <option>Microwaves</option>
+              <option>Musical Instruments</option>
+              <option>Nail Polish</option>
+              <option>Neon</option>
+              <option>Newspaper</option>
+              <option>Office Supplies</option>
+              <option>Oil</option>
+              <option>Pagers</option>
+              <option>Paint</option>
+              <option>Paper</option>
+              <option>Perfumes</option>
+              <option>Pesticide</option>
+              <option>Phone</option>
+              <option>Plastic</option>
+              <option>Printer</option>
+              <option>Propane</option>
+              <option>Refrigerator</option>
+              <option>Sand</option>
+              <option>Shoes</option>
+              <option>Steel</option>
+              <option>Stone</option>
+              <option>Stove</option>
+              <option>Tablets</option>
+              <option>Tires</option>
+              <option>Toasters</option>
+              <option>Toner</option>
+              <option>Tools</option>
+              <option>Toothbrushes</option>
+              <option>Toothpaste</option>
+              <option>Toys</option>
+              <option>Typewriters</option>
+              <option>Vacuum Cleaners</option>
+              <option>Varnish</option>
+              <option>VCR</option>
+              <option>Vehicles</option>
+              <option>Washer</option>
+              <option>Windows</option>
+              <option>Wood</option>
+              <option>Zinc</option>      
+            </select>
+            <div class="text-center">
+                <button class="btn btn-primary btn-md" id="search-btn">
+                <span class="fa fa-search"></span> Search</button>
             </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          </div>
+      </form>
+    </div>
+    <div class="fact">
+      {{#each facts}}
+        <h4>
+          <center><p>Recycling Fact: {{this.fact}}</p></center>
+        </h4>
+      {{/each}}
+    </div>
+   <div id="results-modal" class="information invisible">
+    <div class="closing-x">
+        <div>&times;</div>
+    </div>
+    <div id="stats">
+        <h5 id="material"></h5>
+        <h6 id="description"></h6>
+    </div>
+    </div>
+    <!-- ========= LOGIN ======== -->
+    <div id="login-modal" class="information invisible">
+      <div class="closing-x">
+          <div>&times;</div>
+      </div>
+    <form class="modal-form login">
+        <input type="email" placeholder="johnsmith@gmail.com" class="info-field" class="login-email-field" id="email-input" >
+        <input type="password" placeholder="password" class="info-field" class="login-password-field" id="password-input">
+        </form>
+        <button type="submit" id="modal-signup-button" class="add-messages-button">login</button>  
+    </div>
+    <!-- ========= SIGNUP ======== -->
+    <div id="signup-modal" class="information invisible">
+      <div class="closing-x">
+          <div>&times;</div>
+      </div>
+    <form class="modal-form signup">
+        <input type="email" placeholder="johnsmith@gmail.com" class="info-field" class="signup-email-field" id="email-input" >
+        <input type="password" placeholder="password" class="info-field" class="signup-password-field" id="password-input">
+        </form>
+        <button type="submit" id="modal-signup-button" class="add-messages-button">Sign Up</button>  
+    </div>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js"></script>

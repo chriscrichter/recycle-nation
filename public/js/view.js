@@ -1,25 +1,19 @@
-
 $("#search-btn").on("click", function(event) {
   event.preventDefault();
-
-  //alert("hello world!!");
-
+  
   var materialSearched = $("#material-search").val().trim();
-
   $.get("/api/" + materialSearched, function(data) {
-
     console.log(data);
     renderMaterials(data);
-
   });
 });
 
+
 function renderMaterials(data) {
   if (data.length !== 0) {
-
     $("#stats").empty();
     $("#stats").show();
-    $(".search").css("display", "none");
+    $(".search").addClass("invisible");
     $(".slogan").addClass("invisible");
     $(".photo").css("clip-path", "inset(0% 100% 0% 0%)");
     $(".blue-background").css("margin-right", "40%");

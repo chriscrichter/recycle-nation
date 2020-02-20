@@ -6,7 +6,7 @@ var passport = require("../config/passport");
 var service = require('../services/utils'); 
 
 
-
+/*
 router.get("/", function(req, res) {
   random = service.getRandomInt(2); 
   console.log(random);
@@ -21,6 +21,7 @@ router.get("/", function(req, res) {
 
   })
 })
+*/
 
 module.exports = router; 
 
