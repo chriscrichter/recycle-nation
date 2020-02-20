@@ -13,30 +13,29 @@ const changeModal = () => {
 }
 
 // SHOW RESULTS
-$("#submit").click((event) => {
-  const itemToSearch = $("#item-search-input-field").val();
-  event.preventDefault();
-  changeModal();
-  $("#results-modal").removeClass("invisible");
-  $("#results-modal").addClass("seen");
-  $("#results-modal").css("clip-path", "circle(75%)");
-  console.log(itemToSearch)
-})
+// $("#submit").click((event) => {
+//   const itemToSearch = $("#item-search-input-field").val();
+//   event.preventDefault();
+//   changeModal();
+//   $("#results-modal").removeClass("invisible");
+//   $("#results-modal").addClass("seen");
+//   $("#results-modal").css("clip-path", "circle(75%)");
+//   console.log(itemToSearch)
+// })
 
-// SEARCH BUTTON
+// SHOW RESULTS
 $("#search-btn").on("click", function(event) {
   event.preventDefault();
 
-  //alert("hello world!!");
-
   var bookSearched = $("#material-search").val().trim();
+
+console.log(bookSearched);
 
   $.get("/api/" + bookSearched, function(data) {
 
-    console.log(data);
-    renderBooks(data);
-
+  //renderBooks(data);
   });
+
 });
 
 // MODAL CLOSE ELEMENT
@@ -80,10 +79,39 @@ changeModal();
 
 // LOGIN BUTTON
 $(".login").click(() => {
-$("#login-modal").removeClass("invisible");
-$("#login-modal").addClass("seen");
-$("#login-modal").css("clip-path", "circle(75%)");
-changeModal();
+  $("#login-modal").removeClass("invisible");
+  $("#login-modal").addClass("seen");
+  $("#login-modal").css("clip-path", "circle(75%)");
+  changeModal();
+  
 })
 
 
+
+
+
+
+
+
+
+
+
+
+// $("#modal-signup-button").click(() =>{
+//   event.preventDefault();
+//   let newUser = {
+//     name: $("#email-input").val(),
+//     password: $("#password-input").val()
+//   }
+//   console.log(newUser)
+  
+//   $.ajax("api/signup",{
+//     type: "POST",
+//     data: newUser 
+//   }).then(() => {
+//     console.log("created new user")
+//     // location.reload();
+//   })
+// })
+
+// SIGNUP BUTTON

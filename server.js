@@ -44,6 +44,8 @@ app.use(routes.facts);
 app.use(routes.html);
 app.use(routes.blog);
 app.use(routes.api);
+app.use(routes.material);
+
 
 
 
