@@ -19,19 +19,17 @@ function renderBooks(data) {
 
     $("#stats").empty();
     $("#stats").show();
-    //$(".slogan").addClass("hidden");
-    //$("#modal-container").removeClass("hidden");
-    //$("#modal-container").addClass("visible");
-    //$("#modal-container").css("clip-path", "circle(75%)");
-    $(".name-slogan").css("display", "none");
     $(".search").css("display", "none");
-    $(".slogan").addClass("hidden");
+    $(".slogan").addClass("invisible");
     $(".photo").css("clip-path", "inset(0% 100% 0% 0%)");
     $(".blue-background").css("margin-right", "40%");
     $(".recycle").css("margin-right", "60%");
     $(".nation").css("margin-right", "70%");
     $(".fact").css("margin-right", "33%");
     $(".nav-buttons").css("margin-right", "33%");
+    $("#results-modal").removeClass("invisible");
+    $("#results-modal").addClass("seen");
+    $("#results-modal").css("clip-path", "circle(75%)");
 
     for (var i = 0; i < data.length; i++) {
 

@@ -1,6 +1,8 @@
 var express = require('express');
 var db = require("../models");
 var router = express.Router();
+
+
 var passport = require("../config/passport"); 
 
 
@@ -9,6 +11,7 @@ var passport = require("../config/passport");
 router.get("/api/posts/", function(req, res) {
   db.Post.findAll({raw:true})
     .then(function(dbPost) {
+      console.log('worked'); 
       console.log(dbPost); 
      // console.log(dbPost); 
       var hbsObject = {

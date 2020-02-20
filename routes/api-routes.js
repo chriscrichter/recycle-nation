@@ -1,31 +1,60 @@
-// *********************************************************************************
-// api-routes.js - this file offers a set of routes for displaying and saving data to the db
-// *********************************************************************************
+var express = require('express');
+var router = express.Router();
+var db = require("../models");
 
-// Dependencies
-// =============================================================
-var Book = require("../models/book.js");
-const Sequelize = require('sequelize');
-const Op = Sequelize.Op;
 
-// Routes
-// =============================================================
-module.exports = function(app) {
 
-  // Get a specific material
-  app.get("/api/:description", function(req, res) {
-    Book.findAll({
-      where: {
-        description: {
-          [Op.like]: "%" + req.params.description + "%"
-        }
-      }
-    }).then(function(results) {
-      res.json(results);
+router.get("/api/material/", function(req, res) {
+  console.log(db.Book); 
+  db.Book.findAll({raw:true})
+    .then(function(dbPost) {
+      console.log('material search hit');       
+      console.log(dbPost); 
+     // console.log(dbPost); 
+      
+      res.json(dbPost); 
+      // console.log(hbsObject); 
+      //res.render("index", hbsObject);
+     // res.render("index", { post: dbPost} );
     });
-  });
-}
+});
 
+
+module.exports = router; 
+
+
+
+
+
+//const Op = Sequelize.Op;
+  
+
+
+
+// router.get("/api/:description", function(req, res) {
+//   console.log('search bar is hit'); 
+//   console.log(req.params.description); 
+
+// })
+
+
+
+
+
+
+
+
+// Book.findAll({
+//   where: {
+//     description: {
+//       [Op.like]: "%" + req.params.description + "%"
+//     }
+//   }
+// }).then(function(results) {
+//   console.log(results);
+//   res.json(results);
+// });
+// });
     /*
     console.log(Op)
     Book.findAll({

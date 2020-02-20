@@ -1,0 +1,140 @@
+id,description,description_legacy,material_id,long_description,family_ids,createdAt,updatedAt
+1,"#1 Plastic Bags"," ",445," Plastic bags are used to transport products or to seal foods. #1 Plastic bags may be difficult to recycle because they have limited markets.",NULL,NULL,NULL
+2,"#1 Plastic Beverage Bottles"," #1 Plastic (PETE)",60," PETE bottles have a narrow neck and are included in state bottle deposit laws. They can be clear or colored.",NULL,NULL,NULL
+3,"#1 Plastic Clamshells"," ",446," Clamshells are wide-mouth containers used to package food or other products. They can be clear or colored.",NULL,NULL,NULL
+4,"#1 Plastic Film"," ",447," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once its come in contact with food.",NULL,NULL,NULL
+5,"#1 Plastic Non-Beverage Bottles"," ",449," These are often used as cleaning bottles. Remove pumps before recycling.",NULL,NULL,NULL
+6,"#1 Plastic Trays"," ",450," Most recyclers require that trays are clean and intact to be collected for recycling.",NULL,NULL,NULL
+7,"#1 Rigid Plastics"," ",448," Rigid plastics are wide-mouth containers used to package food or other products.",NULL,NULL,NULL
+8,"#2 Plastic Bags"," Plastic Bags",93," HDPE bags are used when you check out at a retail location and are often accepted for recycling at these retailers.",NULL,NULL,NULL
+9,"#2 Plastic Bottles"," ",455," HDPE bottles are typically opaque and used for shampoo bottles, detergent bottles and household cleaning containers.",NULL,NULL,NULL
+10,"#2 Plastic Caps"," ",619," Plastic caps can typically be left on the bottle for recycling.",NULL,NULL,NULL
+11,"#2 Plastic Clamshells"," ",452," #2 plastic clamshell containers are common wide-mouthed packaging used for food or other products. They can be clear or colored.",NULL,NULL,NULL
+12,"#2 Plastic Film"," ",413," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once it has come in contact with food.",NULL,NULL,NULL
+13,"#2 Plastic Jugs - Clear"," #2 Plastic (HDPE Clear)",62," HDPE jugs are different than HDPE bottles and their color helps determine the recycling market.",NULL,NULL,NULL
+14,"#2 Plastic Jugs - Colored"," #2 Plastic (HDPE Colored)",61," HDPE jugs are different than HDPE bottles and their color helps determine the recycling market.",NULL,NULL,NULL
+15,"#2 Rigid Plastics"," ",454," Rigid plastics are wide-mouth containers used to package food or other products. ",NULL,NULL,NULL
+16,"#3 Plastic Bags"," ",456," Plastic bags are used to transport products or to seal foods. #3 plastic bags can be difficult to recycle.",NULL,NULL,NULL
+17,"#3 Plastic Bottles"," #3 Plastic",63," PVC bottles have a limited recycling market and can be difficult to recycle.",NULL,NULL,NULL
+18,"#3 Plastic Film"," ",457," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once it has come in contact with food.",NULL,NULL,NULL
+19,"#3 Rigid Plastics"," ",458," Rigid plastics are wide-mouth containers used to package food or other products.",NULL,NULL,NULL
+20,"#4 Flexible Plastics"," ",708," Flexible plastics are pliable structures made of plastic, such as soda can 6-pack rings.",NULL,NULL,NULL
+21,"#4 Plastic Bags"," ",429," LDPE bags are used to bag produce and other foods and are often accepted at retailers.",NULL,NULL,NULL
+22,"#4 Plastic Bottles"," #4 Plastic (LDPE)",64," LDPE is typically used for squeezable bottles and shopping bags.",NULL,NULL,NULL
+23,"#4 Plastic Film"," ",461," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once it has come in contact with food.",NULL,NULL,NULL
+24,"#4 Rigid Plastics"," ",463," Rigid plastics are wide-mouth containers used to package food or other products. ",NULL,NULL,NULL
+25,"#5 Plastic Bags"," ",464," Plastic bags are used to transport products or to seal foods. #5 plastic bags may be difficult to recycle due to their limited recycling market.",NULL,NULL,NULL
+26,"#5 Plastic Bottles"," #5 Plastic (Polypropylene)",65," Recycling of #5 Polypropelene packaging is limited but increasing.",NULL,NULL,NULL
+27,"#5 Plastic Caps"," ",361," These caps can remain on the bottle when recycling.",NULL,NULL,NULL
+28,"#5 Plastic Clamshells"," ",465," #5 plastic clamshells are wide-mouth containers used to package food or other products. They can be clear or colored.",NULL,NULL,NULL
+29,"#5 Plastic Cups"," ",466," Plastic cups are rigid plastics designed to contain liquids.",NULL,NULL,NULL
+30,"#5 Plastic Film"," ",467," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once it has come in contact with food.",NULL,NULL,NULL
+31,"#5 Rigid Plastics"," ",468," Rigid plastics are wide-mouth containers used to package food or other products.",NULL,NULL,NULL
+32,"#6 Plastic - Expanded"," ",355," Commonly known by the brand name Styrofoam. Access to styrofoam recycling continues to increase.",NULL,NULL,NULL
+33,"#6 Plastic Bags"," ",470," Plastic bags are used to transport products or to seal foods. Access to recycling of #6 plastic bags is limited.",NULL,NULL,NULL
+34,"#6 Plastic Bottles"," #6 Plastic (Polystyrene)",66," Polystyrene bottles have a limited market and are difficult to recycle.",NULL,NULL,NULL
+35,"#6 Plastic Clamshells - Expanded"," ",472," #6 Plastic Clamshells are often used for containing food however once Polystyrene has come in contact with food it becomes more difficult to recycle.",NULL,NULL,NULL
+36,"#6 Plastic Cups"," ",621," Plastic cups are rigid plastics designed to contain liquids. #6 cups are recognizable as a classic picnic and party cup.",NULL,NULL,NULL
+37,"#6 Plastic Cups - Expanded"," ",471," Commonly known by the brand name Styrofoam, this is an end-product, which limits its recycling market.",NULL,NULL,NULL
+38,"#6 Plastic Film"," ",473," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once it has come in contact with food.",NULL,NULL,NULL
+39,"#6 Plastic Peanuts"," Packing Peanut Reuse",68," Styrofoam packing peanuts are often accepted at shipping stores for reuse.",NULL,NULL,NULL
+40,"#6 Rigid Plastics"," ",475," Rigid plastics are wide-mouth containers used to package food or other products. ",NULL,NULL,NULL
+41,"#7 Plastic Bags"," ",477," Plastic bags are used to transport products, or to seal foods. #7 plastic bags have a limited recycling market and are difficult to recycle.",NULL,NULL,NULL
+42,"#7 Plastic Bottles"," #7 Plastic (Other)",67," This code indicates a mix of multiple plastic resins. Bottles made of bioplastics fall into this group. They should not be mixed with PETE bottles for recycling.",NULL,NULL,NULL
+43,"#7 Plastic Film"," ",478," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once in contact with food.",NULL,NULL,NULL
+44,"#7 Rigid Plastics"," ",476," Rigid plastics are wide-mouth containers used to package food or other products. ",NULL,NULL,NULL
+45,Acids," ",503," Acids do not have a recycling market and should be disposed of as household hazardous waste. Take care when transporting to avoid burns.",NULL,NULL,NULL
+46,Adhesives," Adhesives",187," Adhesives are either water- or solvent-based. Solvent-based adhesives should be disposed of as household hazardous waste.",NULL,NULL,NULL
+47,"Adult Toys"," ",353," Adult toys contain electronics components. Manufacturer mail-in programs are a common collection point.",NULL,NULL,NULL
+48,"Aerosol Cans - Empty"," Aerosol Cans",121," If empty, aerosol cans may be recyclable with steel cans. If partially full, they are treated as household hazardous waste.",NULL,NULL,NULL
+49,"Aerosol Cans - Full"," ",521," If empty, aerosol cans may be recyclable with steel cans. If partially full, they are treated as household hazardous waste.",NULL,NULL,NULL
+50,"Air Conditioners"," ",591," Air conditioners contain Freon, which may limit their acceptance with other appliances in recycling programs. Ask your HVAC installer if they remove and recycle old air conditioners when deciding to upgrade.",NULL,NULL,NULL
+51,"Alkaline Batteries"," Single-use Batteries",104," Single-use batteries do not contain heavy metals, which limits their recycling market. You may have to pay for recycling.",NULL,NULL,NULL
+52,"Aluminum Beverage Cans"," Aluminum Cans",70," Aluminum cans are infinitely recyclable and are included in state bottle deposit laws.",NULL,NULL,NULL
+53,"Aluminum Foil"," Aluminum Foil",235," Most recyclers require that foil is clean and intact to be collected for recycling. It is not always accepted with other aluminum products.",NULL,NULL,NULL
+54,"Aluminum Food Cans"," ",435," Aluminum is commonly used for pet food cans and has a different recycling market than aluminum beverage cans.",NULL,NULL,NULL
+55,"Aluminum Lids"," ",434," These lids are often used for glass bottles, but some recyclers request that they are separated from glass or removed.",NULL,NULL,NULL
+56,"Aluminum Pie Plates"," ",436," Most recyclers require that pie plates are clean and intact to be collected for recycling. They are not always accepted with other aluminum products.",NULL,NULL,NULL
+57,"Aluminum Scrap"," ",607," Aluminum is one of the most-recycled metals in the world. Aluminum can be reused infinitely without losing its material characteristics.",NULL,NULL,NULL
+58,"Aluminum Trays"," ",437," Most recyclers require that trays are clean and intact to be collected for recycling. They are not always accepted with other aluminum products.",NULL,NULL,NULL
+59,Ammunition," Ammunition",194," Ammunition does not have a recycling market, but may accepted at law enforcement offices for proper disposal.",NULL,NULL,NULL
+60,Antifreeze," Antifreeze",3," Antifreeze can be recycled into new antifreeze, or treated as household hazardous waste.",NULL,NULL,NULL
+61,"Arts and Crafts Supplies"," ",363," Arts supplies do not have a recycling market but can be donated for reuse.",NULL,NULL,NULL
+62,Asbestos," Asbestos",196," Asbestos can have negative health impacts if improperly handled. Professional removal is an alternative.",NULL,NULL,NULL
+63,Asphalt," Asphalt",212," Asphalt can be recycled into new asphalt or accepted as construction and demolition (C&D) waste.",NULL,NULL,NULL
+64,"Audio Equipment"," ",485," Electronics include recyclable plastics and valuable metal components. Be sure to erase any personal information before recycling.",NULL,NULL,NULL
+65,"Auto Bodies"," Auto Bodies",219," Auto bodies are largely comprised of steel. All fluids need to be removed before recycling.",NULL,NULL,NULL
+66,"Auto Parts"," Auto Parts",275," Auto parts are largely comprised of steel. All fluids need to be removed before recycling.",NULL,NULL,NULL
+67,"Baby Products"," ",422," Some baby products can be donated for reuse. ...
+Collapse
+ This snippet was truncated for display; see it in full
+
+
+
+
+
+
+
+
+7:35
+materials.csv 
+id,description,description_legacy,material_id,long_description,family_ids,createdAt,updatedAt
+1,"#1 Plastic Bags"," ",445," Plastic bags are used to transport products or to seal foods. #1 Plastic bags may be difficult to recycle because they have limited markets.",NULL,NULL,NULL
+2,"#1 Plastic Beverage Bottles"," #1 Plastic (PETE)",60," PETE bottles have a narrow neck and are included in state bottle deposit laws. They can be clear or colored.",NULL,NULL,NULL
+3,"#1 Plastic Clamshells"," ",446," Clamshells are wide-mouth containers used to package food or other products. They can be clear or colored.",NULL,NULL,NULL
+4,"#1 Plastic Film"," ",447," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once its come in contact with food.",NULL,NULL,NULL
+5,"#1 Plastic Non-Beverage Bottles"," ",449," These are often used as cleaning bottles. Remove pumps before recycling.",NULL,NULL,NULL
+6,"#1 Plastic Trays"," ",450," Most recyclers require that trays are clean and intact to be collected for recycling.",NULL,NULL,NULL
+7,"#1 Rigid Plastics"," ",448," Rigid plastics are wide-mouth containers used to package food or other products.",NULL,NULL,NULL
+8,"#2 Plastic Bags"," Plastic Bags",93," HDPE bags are used when you check out at a retail location and are often accepted for recycling at these retailers.",NULL,NULL,NULL
+9,"#2 Plastic Bottles"," ",455," HDPE bottles are typically opaque and used for shampoo bottles, detergent bottles and household cleaning containers.",NULL,NULL,NULL
+10,"#2 Plastic Caps"," ",619," Plastic caps can typically be left on the bottle for recycling.",NULL,NULL,NULL
+11,"#2 Plastic Clamshells"," ",452," #2 plastic clamshell containers are common wide-mouthed packaging used for food or other products. They can be clear or colored.",NULL,NULL,NULL
+12,"#2 Plastic Film"," ",413," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once it has come in contact with food.",NULL,NULL,NULL
+13,"#2 Plastic Jugs - Clear"," #2 Plastic (HDPE Clear)",62," HDPE jugs are different than HDPE bottles and their color helps determine the recycling market.",NULL,NULL,NULL
+14,"#2 Plastic Jugs - Colored"," #2 Plastic (HDPE Colored)",61," HDPE jugs are different than HDPE bottles and their color helps determine the recycling market.",NULL,NULL,NULL
+15,"#2 Rigid Plastics"," ",454," Rigid plastics are wide-mouth containers used to package food or other products. ",NULL,NULL,NULL
+16,"#3 Plastic Bags"," ",456," Plastic bags are used to transport products or to seal foods. #3 plastic bags can be difficult to recycle.",NULL,NULL,NULL
+17,"#3 Plastic Bottles"," #3 Plastic",63," PVC bottles have a limited recycling market and can be difficult to recycle.",NULL,NULL,NULL
+18,"#3 Plastic Film"," ",457," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once it has come in contact with food.",NULL,NULL,NULL
+19,"#3 Rigid Plastics"," ",458," Rigid plastics are wide-mouth containers used to package food or other products.",NULL,NULL,NULL
+20,"#4 Flexible Plastics"," ",708," Flexible plastics are pliable structures made of plastic, such as soda can 6-pack rings.",NULL,NULL,NULL
+21,"#4 Plastic Bags"," ",429," LDPE bags are used to bag produce and other foods and are often accepted at retailers.",NULL,NULL,NULL
+22,"#4 Plastic Bottles"," #4 Plastic (LDPE)",64," LDPE is typically used for squeezable bottles and shopping bags.",NULL,NULL,NULL
+23,"#4 Plastic Film"," ",461," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once it has come in contact with food.",NULL,NULL,NULL
+24,"#4 Rigid Plastics"," ",463," Rigid plastics are wide-mouth containers used to package food or other products. ",NULL,NULL,NULL
+25,"#5 Plastic Bags"," ",464," Plastic bags are used to transport products or to seal foods. #5 plastic bags may be difficult to recycle due to their limited recycling market.",NULL,NULL,NULL
+26,"#5 Plastic Bottles"," #5 Plastic (Polypropylene)",65," Recycling of #5 Polypropelene packaging is limited but increasing.",NULL,NULL,NULL
+27,"#5 Plastic Caps"," ",361," These caps can remain on the bottle when recycling.",NULL,NULL,NULL
+28,"#5 Plastic Clamshells"," ",465," #5 plastic clamshells are wide-mouth containers used to package food or other products. They can be clear or colored.",NULL,NULL,NULL
+29,"#5 Plastic Cups"," ",466," Plastic cups are rigid plastics designed to contain liquids.",NULL,NULL,NULL
+30,"#5 Plastic Film"," ",467," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once it has come in contact with food.",NULL,NULL,NULL
+31,"#5 Rigid Plastics"," ",468," Rigid plastics are wide-mouth containers used to package food or other products.",NULL,NULL,NULL
+32,"#6 Plastic - Expanded"," ",355," Commonly known by the brand name Styrofoam. Access to styrofoam recycling continues to increase.",NULL,NULL,NULL
+33,"#6 Plastic Bags"," ",470," Plastic bags are used to transport products or to seal foods. Access to recycling of #6 plastic bags is limited.",NULL,NULL,NULL
+34,"#6 Plastic Bottles"," #6 Plastic (Polystyrene)",66," Polystyrene bottles have a limited market and are difficult to recycle.",NULL,NULL,NULL
+35,"#6 Plastic Clamshells - Expanded"," ",472," #6 Plastic Clamshells are often used for containing food however once Polystyrene has come in contact with food it becomes more difficult to recycle.",NULL,NULL,NULL
+36,"#6 Plastic Cups"," ",621," Plastic cups are rigid plastics designed to contain liquids. #6 cups are recognizable as a classic picnic and party cup.",NULL,NULL,NULL
+37,"#6 Plastic Cups - Expanded"," ",471," Commonly known by the brand name Styrofoam, this is an end-product, which limits its recycling market.",NULL,NULL,NULL
+38,"#6 Plastic Film"," ",473," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once it has come in contact with food.",NULL,NULL,NULL
+39,"#6 Plastic Peanuts"," Packing Peanut Reuse",68," Styrofoam packing peanuts are often accepted at shipping stores for reuse.",NULL,NULL,NULL
+40,"#6 Rigid Plastics"," ",475," Rigid plastics are wide-mouth containers used to package food or other products. ",NULL,NULL,NULL
+41,"#7 Plastic Bags"," ",477," Plastic bags are used to transport products, or to seal foods. #7 plastic bags have a limited recycling market and are difficult to recycle.",NULL,NULL,NULL
+42,"#7 Plastic Bottles"," #7 Plastic (Other)",67," This code indicates a mix of multiple plastic resins. Bottles made of bioplastics fall into this group. They should not be mixed with PETE bottles for recycling.",NULL,NULL,NULL
+43,"#7 Plastic Film"," ",478," Plastic film is a thin layer of plastic often used to seal foods. It has a limited recycling market once in contact with food.",NULL,NULL,NULL
+44,"#7 Rigid Plastics"," ",476," Rigid plastics are wide-mouth containers used to package food or other products. ",NULL,NULL,NULL
+45,Acids," ",503," Acids do not have a recycling market and should be disposed of as household hazardous waste. Take care when transporting to avoid burns.",NULL,NULL,NULL
+46,Adhesives," Adhesives",187," Adhesives are either water- or solvent-based. Solvent-based adhesives should be disposed of as household hazardous waste.",NULL,NULL,NULL
+47,"Adult Toys"," ",353," Adult toys contain electronics components. Manufacturer mail-in programs are a common collection point.",NULL,NULL,NULL
+48,"Aerosol Cans - Empty"," Aerosol Cans",121," If empty, aerosol cans may be recyclable with steel cans. If partially full, they are treated as household hazardous waste.",NULL,NULL,NULL
+49,"Aerosol Cans - Full"," ",521," If empty, aerosol cans may be recyclable with steel cans. If partially full, they are treated as household hazardous waste.",NULL,NULL,NULL
+50,"Air Conditioners"," ",591," Air conditioners contain Freon, which may limit their acceptance with other appliances in recycling programs. Ask your HVAC installer if they remove and recycle old air conditioners when deciding to upgrade.",NULL,NULL,NULL
+51,"Alkaline Batteries"," Single-use Batteries",104," Single-use batteries do not contain heavy metals, which limits their recycling market. You may have to pay for recycling.",NULL,NULL,NULL
+52,"Aluminum Beverage Cans"," Aluminum Cans",70," Aluminum cans are infinitely recyclable and are included in state bottle deposit laws.",NULL,NULL,NULL
+53,"Aluminum Foil"," Aluminum Foil",235," Most recyclers require that foil is clean and intact to be collected for recycling. It is not always accepted with other aluminum products.",NULL,NULL,NULL
+54,"Aluminum Food Cans"," ",435," Aluminum is commonly used for pet food cans and has a different recycling market than aluminum beverage cans.",NULL,NULL,NULL
+55,"Aluminum Lids"," ",434," These lids are often used for glass bottles, but some recyclers request that they are separated from glass or removed.",NULL,NULL,NULL
+56,"Aluminum Pie Plates"," ",436," Most recyclers require that pie plates are clean and intact to be collected for recycling. They are not always accepted with other aluminum products.",NULL,NULL,NULL
+57,"Aluminum Scrap"," ",607," Aluminum is one of the most-recycled metals in the world. Aluminum can be reused infinitely without losing its material characteristics.",NULL,NULL,NULL
+58,"Aluminum Trays"," ",437," Most recyclers require that trays are clean and intact to be collected for recycling. They are not always accepted with other aluminum products.",NULL,NULL,NULL
+59,Ammunition," Ammunition",194," Ammunition does not have a recycling market, but may accepted at law enforcement offices for proper disposal.",NULL,NULL,NULL

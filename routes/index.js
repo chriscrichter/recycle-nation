@@ -4,5 +4,6 @@ module.exports = {
   facts: require('./facts'),
   user: require('./user'),
   twitter: require('./twitter'),
-  api: require('./login')
+  api: require('./login'),
+  material: require('./api-routes')
 };
