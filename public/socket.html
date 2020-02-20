@@ -3,39 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photography-based</title>
-  <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Heebo&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="stylesheets/style.css">
+  <title>Tweets</title>
+  <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Heebo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="desktop.css">
   </head>
   <body>
     <div class="page">
-      <div class="videos">
-          <div class="button">Videos</div>
+      <div class="tweets-wrapper">
+        <label for="cars">Choose a room to join</label>
+        <select id="rooms">
+          <option id="1" value="environment">Environment</option>
+          <option id="2" value="recycling">Recycling</option>
+          <option id= "3" value="turtles">Turtles</option>
+          <option id="4" value="waste">Waste</option>
+          <option id="5"value="Greta">Greta</option>
+          <option id="6" value="reuse">Reuse</option>
+          <option id="7" value="coronavirus">Coronavirus</option>
+          <option id="8" value="global warming">Global Warming</option>
+          <option id="9" value="polar bears">Polar Bears</option>
+          <option id="10" value="live green">Live Green</option>
+          <option id="11" value="landfill">Landfill</option>
+          <option id="12" value="Thunberg">Thunberg</option>  
+        </select>
+        <div class="twitter-feed">
+          <ul class=tweets></ul>
+        </div>
       </div>
-      <div class="tweets-blog">
-        <div class="button tweet">Tweets/Blog</div>
-      </div>
-      <div class="name-slogan">
-        <p class="name">Recycle Nation</p>
-        <p class="slogan">Best recycling practices to avoid pollution</p>
-      </div>
-      <label for="cars">Choose a room to join</label>
-      <select id="rooms">
-        <option id="1" value="environment">Environment</option>
-        <option id="2" value="recycling">Recycling</option>
-        <option id= "3" value="turtles">Turtles</option>
-        <option id="4" value="waste">Waste</option>
-        <option id="5"value="reuse">Reuse</option>
-        <option id="6" value="landfill">Landfill</option>
-
-      </select>
-      <div class="twitter-feed">
-        <ul class=tweets></ul>
-      </div>
-    </div>
+      
+      <div class="photo"></div>
+  <div class="blue-background"></div>
+    <p class="recycle">Recycle</p>
+    <div class="nation"><p>Nation</p></div>
+    
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/signup.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="/js/socket.io.js"></script>
     <script src="/js/twitter.js"></script>
+    <script src="js/view.js" type="text/javascript"></script>
     <script>
       var socket = io();
       var tweetList = $('ul.tweets');
@@ -51,9 +59,6 @@
         console.log("location selected", this.value);
         socket.emit('new room', this.value);
       });
-    </script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/signup.js"></script>
+    </script>
 </body>
 </html> 

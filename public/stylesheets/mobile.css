@@ -285,6 +285,10 @@ button {
     outline: none;
 }
 
+.signup-button {
+    color: white;
+}
+
 .closing-x{
     color: white;
     font-size: 25px;
@@ -333,13 +337,45 @@ button {
     transition: visibility 0s 0.3s, opacity 0.3s linear;
 }
 
-/* .twitter-feed {
-    background-color: #eeeeee; 
-    min-height: 200px; 
-    max-height: 200px;
-    overflow: scroll; 
-    max-width: 300px; 
-} */
+#stats {
+    color: white;
+    margin: 0 10% 10% 10%;
+    font-size: 16px;
+    overflow-y: scroll;
+    padding: 5%;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+h5, h6 {
+    font-size: 16px;  
+}
+.tweets-wrapper {
+    font-family: 'Poppins', sans-serif;
+    grid-row: 2 / -1;
+    grid-column: 5 / -1;
+    justify-self: center;
+    margin: 0 5%;
+    overflow-y: scroll;
+}
+label {
+    font-family: 'Poppins', sans-serif;
+}
+
+option {
+    font-family: 'Poppins', sans-serif;
+}
+
+.tweets {
+    margin: 5%;
+    
+}
+
+.twitter-feed {
+    
+}
 
 
 
