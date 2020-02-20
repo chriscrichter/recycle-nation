@@ -8,29 +8,27 @@ router.get("/api/:material/", function(req, res) {
   // console.log(db.Post); 
   // console.log(db.Material); 
   // console.log(req.params);
-  db.Material.findAll({   
-    
-    where: {
-      description: {
+  db.Material.findAll({ attributes: [ 'long_description'], raw: true ,    
+    //attributes: ['long_description'],
+    where: 
+      { description: {
+         [Op.like]: "%" + req.params.material + "%"} 
+        } 
       
-      [Op.like]: "%" + req.params.material + "%"
-    }
-  }}
-    )
+    })
     .then(function(dbMaterial) {
-      // console.log('material search hit');       
-      // console.log(dbPost); 
-     // console.log(dbPost); 
-      
-      //res.json(dbPost); 
-      // console.log(hbsObject); 
-      //res.render("index", hbsObject);
-     // res.render("index", { post: dbPost} );
-    console.log(dbMaterial); 
+     
+      // for (let i = 0; i < dbMaterial.length; i++) {
+      //   const current = dbMaterial[i]; 
+        
+      //   }
+      // }
+    // console.log
+     console.log(dbMaterial); 
      var hbsObject = {
       results: dbMaterial
     };
-    console.log(hbsObject); 
+   // console.log(hbsObject); 
     res.render('index', hbsObject); 
   })
 });

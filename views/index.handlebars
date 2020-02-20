@@ -2,7 +2,7 @@
   <div class="photo"></div>
   <div class="blue-background"></div>
   <div class="nav-buttons">
-      <button class="tweets">Tweets</button>
+      <a href="/twitter"><button class="tweets">Tweets</button></a>
       <button class="messages">Message Board</button>
       <button class="login">Log In</button>
       <button class="signup" id="signup-button">Sign Up</button>
@@ -47,7 +47,7 @@
       {{/each}}
     </div>
     <!-- ========= RESULTS ======== -->
-    <div id="results-modal" class="modal invisible">
+    {{!-- <div id="results-modal" class="modal invisible">
         <div class="closing-x">
             <div>&times;</div>
         </div>
@@ -55,7 +55,7 @@
             <h5 id="material"></h5>
             <h6 id="description"></h6>
             </div>
-    </div>
+    </div> --}}
     <!-- ========= TWEETS ======== -->
     <div id="tweets-modal" class="modal invisible">
       <div class="closing-x">
@@ -79,9 +79,9 @@
           <div>&times;</div>
       </div>
       {{#each results}}
-        {{#if description}}
+  
           {{> results/result-block}}
-        {{/if}}
+  
       {{/each}}
     </div>
     
