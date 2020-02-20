@@ -1,13 +1,21 @@
 var express = require('express');
 var router = express.Router();
 var db = require("../models");
+var Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 
-
-
-router.get("/api/material/", function(req, res) {
+router.get("/api/:material/", function(req, res) {
   console.log(db.Post); 
   console.log(db.Material); 
-  db.Material.findAll({raw:true})
+  console.log(req.params);
+  db.Material.findAll({   
+    where: {
+    description: {
+      
+      [Op.like]: "%" + req.params.material + "%"
+    }
+  }}
+    )
     .then(function(dbPost) {
       console.log('material search hit');       
       console.log(dbPost); 

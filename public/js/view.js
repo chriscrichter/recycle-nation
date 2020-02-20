@@ -4,17 +4,17 @@ $("#search-btn").on("click", function(event) {
 
   //alert("hello world!!");
 
-  var bookSearched = $("#material-search").val().trim();
+  var materialSearched = $("#material-search").val().trim();
 
-  $.get("/api/" + bookSearched, function(data) {
+  $.get("/api/" + materialSearched, function(data) {
 
     console.log(data);
-    renderBooks(data);
+    renderMaterials(data);
 
   });
 });
 
-function renderBooks(data) {
+function renderMaterials(data) {
   if (data.length !== 0) {
 
     $("#stats").empty();
@@ -36,7 +36,9 @@ function renderBooks(data) {
       var div = $("<div>")
       div.append("<h5>" + data[i].description + "</h5>");
       div.append("<h6>Description: " + data[i].long_description + "</h6>");
- 
+      console.log(data[i].description);
+      console.log(data[i].long_description);
+
       $("#stats").append(div);
       //$(".name-slogan").append(div);
 

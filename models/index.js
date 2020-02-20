@@ -14,7 +14,7 @@ if (config.use_env_variable) {
     host: '127.0.0.1', 
     dialect: 'mysql',
     username: 'root',
-    password: 'Theoffice92', 
+    password: 'Columbia20', 
     database: 'recycle_DB'
   })
 }

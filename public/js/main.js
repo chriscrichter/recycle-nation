@@ -27,13 +27,13 @@ const changeModal = () => {
 $("#search-btn").on("click", function(event) {
   event.preventDefault();
 
-  var bookSearched = $("#material-search").val().trim();
+  var materialSearched = $("#material-search").val().trim();
 
-console.log(bookSearched);
+console.log(materialSearched);
 
-  $.get("/api/" + bookSearched, function(data) {
+  $.get("/api/" + materialSearched, function(data) {
 
-  //renderBooks(data);
+  renderMaterials(data);
   });
 
 });
