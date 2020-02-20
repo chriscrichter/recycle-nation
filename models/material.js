@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     }, 
     material_id: {
       type: DataTypes.INTEGER
-    }
+    }, 
   })
   return Material;
 }

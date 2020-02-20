@@ -31,7 +31,7 @@ $("#search-btn").on("click", function(event) {
 
 console.log(bookSearched);
 
-  $.get("/api/" + bookSearched, function(data) {
+  $.get("/api/material/" + bookSearched, function(data) {
 
   //renderBooks(data);
   });
