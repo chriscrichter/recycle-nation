@@ -19,8 +19,8 @@ function renderMaterials(data) {
 
     $("#stats").empty();
     $("#stats").show();
-    $(".search").css("display", "none");
-    $(".slogan").addClass("invisible");
+    $(".search").addClass("invisible");
+  $(".slogan").addClass("invisible");
     $(".photo").css("clip-path", "inset(0% 100% 0% 0%)");
     $(".blue-background").css("margin-right", "40%");
     $(".recycle").css("margin-right", "60%");
