@@ -11,7 +11,7 @@ var sequelize = new Sequelize("gajb8m09t9ub53b5", "bm8ozsqt8ehomlw5", "xr1wsmn48
   port: 3306,
   dialect: "mysql",
   pool: {
-    max: 5,
+    max: 50,
     min: 0,
     idle: 10000
   }

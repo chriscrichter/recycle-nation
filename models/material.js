@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  const Book = sequelize.define('Book', {
+  const Material = sequelize.define('Material', {
     description: {
       type: DataTypes.STRING,
     },
@@ -13,5 +13,5 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER
     }
   })
-  return Book;
+  return Material;
 }
