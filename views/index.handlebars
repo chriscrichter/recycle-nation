@@ -74,6 +74,16 @@
         {{> messages/message-block}}
       {{/each}}
     </div>
+     <div id="messages-modal" class="information invisible">
+      <div class="closing-x">
+          <div>&times;</div>
+      </div>
+      {{#each results}}
+        {{#if description}}
+          {{> results/result-block}}
+        {{/if}}
+      {{/each}}
+    </div>
     
     <!-- ========= View Posts ======== -->
     <div id="add-messages-modal" class="information invisible">
