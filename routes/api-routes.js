@@ -21,6 +21,7 @@ module.exports = function(app) {
         }
       }
     }).then(function(results) {
+      console.log(results); 
       res.json(results);
     });
   });

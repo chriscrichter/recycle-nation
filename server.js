@@ -11,6 +11,12 @@ var twitter = require("./services/twitter");
 const utils = require('./services/utils');
 const mysql = require("mysql");
 const path = require('path');
+var compression = require('compression')
+
+app.use(compression())
+
+
+
 
 var PORT = process.env.PORT || 8080;
 const supportedEnivornments = ['environment', 'recycling', 'turtles', 'waste', 'greta', 'reuse', 'coronavirus', 'global warming', 'polar bears', 'live green', 'landfill', 'Thunberg'];
@@ -47,14 +53,14 @@ app.use(routes.blog);
 app.use(routes.api);
 //app.use(routes.material);
 
-require("./routes/api-routes.js")(app);
+// require("./routes/api-routes.js")(app);
 
 var connection = mysql.createConnection({
-  host: "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  host: "127.0.0.1",
   port: 3306,
-  user: "bm8ozsqt8ehomlw5",
-  password: "xr1wsmn48fb916jq",
-  database: "gajb8m09t9ub53b5"
+  user: "root",
+  password: "Theoffice92",
+  database: "recycle_DB"
 });
 
 connection.connect(function(err) {

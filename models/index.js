@@ -11,7 +11,7 @@ if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, { 
-    host: 's3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', 
+    host: '127.0.0.1', 
     dialect: 'mysql',
     username: 'root',
     password: 'Theoffice92', 

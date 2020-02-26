@@ -7,28 +7,30 @@ const twitter = {
   access_token_secret: 'DudaLUjjjDwO7DnYrUrdd4xE6xfI7awCbN33pPdsGhx8S'
 };
 
-const envConfigs = {
-  "development": {
-    "username": "bm8ozsqt8ehomlw5",
-    "password": "xr1wsmn48fb916jq",
-    "database": "gajb8m09t9ub53b5",
-    "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "bm8ozsqt8ehomlw5",
-    "password": "xr1wsmn48fb916jq",
-    "database": "gajb8m09t9ub53b5",
-    "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql"
-  },
-  "production": {
-    "dialect": "mysql",
-    "use_env_variable":"JAWSDB_URL"
-  }
-}
+// const envConfigs = {
+//   "development": {
+//     "username": "bm8ozsqt8ehomlw5",
+//     "password": "xr1wsmn48fb916jq",
+//     "database": "gajb8m09t9ub53b5",
+//     "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+//     "dialect": "mysql"
+//   },
+//   "test": {
+//     "username": "bm8ozsqt8ehomlw5",
+//     "password": "xr1wsmn48fb916jq",
+//     "database": "gajb8m09t9ub53b5",
+//     "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+//     "dialect": "mysql"
+//   },
+//   "production": {
+//     "dialect": "mysql",
+//     "use_env_variable":"JAWSDB_URL"
+//   }
+// // }
 
-module.exports = {
-  twitter,
-  ...envConfigs[env]
-};
+// module.exports = {
+//   twitter,
+//   ...envConfigs[env]
+// };
+
+module.exports = twitter; 
