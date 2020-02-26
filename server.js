@@ -11,6 +11,7 @@ var twitter = require("./services/twitter");
 const utils = require('./services/utils');
 const mysql = require("mysql");
 const path = require('path');
+var compression = require('compression')
 
 var PORT = process.env.PORT || 8080;
 const supportedEnivornments = ['environment', 'recycling', 'turtles', 'waste', 'greta', 'reuse', 'coronavirus', 'global warming', 'polar bears', 'live green', 'landfill', 'Thunberg'];
