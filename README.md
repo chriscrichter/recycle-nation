@@ -11,6 +11,44 @@ Persona: Reese
 
 She is 25, single and very busy. She is a grad student and works full time. She cares about the environment and the future of the world but doesn't have time to work out the fundamentals of recycling.
 
+## Built With 
+
+•   NodeJS
+•   Javascript
+•   Express
+•   HandleBars
+•   MySQL
+•   Socket.io
+•   Sequelize
+•   NodeJS
+•   Axios
+
+
+## Getting Started
+
+To run on your local computer clone the SSH key to your local drive. Open with a terminal bash and run the following commands
+
+npm init -y
+
+npm install 
+
+This will download all the dependencies including axios, handlebars, express, and mySQL. Once installed hit the following command to run the application. 
+
+npm run seeds.csv
+
+npm run server
+
+
+
+### Prerequisites
+
+NodeJS
+Terminal/Bash
+Source Code Editor
+MySQL
+mySQLWorkbench
+
+
 ## Team
 
 Juju  |  Sasha  |  Alex  | Chris
