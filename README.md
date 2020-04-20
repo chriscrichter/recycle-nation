@@ -52,3 +52,7 @@ mySQLWorkbench
 ## Team
 
 Juju  |  Sasha  |  Alex  | Chris
+
+##Deployed
+
+https://intense-thicket-33780.herokuapp.com/
