@@ -13,7 +13,6 @@ She is 25, single and very busy. She is a grad student and works full time. She 
 
 ## Built With 
 
-•   NodeJS
 •   Javascript
 •   Express
 •   HandleBars
