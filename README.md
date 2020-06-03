@@ -1,11 +1,11 @@
 # Recycle Nation
 An app that tells you what to recycle and what people around the world are saying about environmental issues.
 
-<img src="assets/images/recyclenation.png" width="600" height="350">
+<img src="/assets/images/recyclenation.png" width="600" height="350">
 
-<img src="assets/images/recyclenationsearch.png" width="600" height="350">
+<img src="/assets/images/recyclenationsearch.png" width="600" height="350">
 
-<img src="assets/images/recyclenationtweets.png" width="600" height="350">
+<img src="/assets/images/recyclenationtweets.png" width="600" height="350">
 
 
 ## Description
